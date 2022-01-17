@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      ar-create.m
+%%      clean-objects.m
 %%
 %%  BRIEF
-%%      Create a static library from object files with `ar`.
+%%      Remove object files.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -47,18 +47,17 @@
 %%%%
 
 % Software.
-software.archiver.self  = ' ar ';
-software.archiver.flags = ' rsv ';
-software.archiver.call  = [software.archiver.self software.archiver.flags];
+software.check.self         = ' test ';
+software.check.flags        = ' -e ';
+software.check.call.base    = [software.check.self software.check.flags];
 
 
 
 % Files.
-files.self              = ' ar-create.m ';
+files.self              = ' clean-objects.m ';
 
-files.library.name      = '';
-files.library.source    = ' *.o ';
-files.library.target    = [' lib' files.library.name '.a '];
+files.types.objects.o   = ' *.o ';
+files.types.objects.obj = ' *.obj ';
 
 
 
@@ -68,8 +67,8 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.archiver.call  = [software.archiver.call files.library.target];
-software.archiver.call  = [software.archiver.call files.library.source];
+software.check.call.o   = [software.check.call.base files.types.objects.o];
+software.check.call.obj = [software.check.call.base files.types.objects.obj];
 
 
 
@@ -84,13 +83,23 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call library creation tool.
-disp ([banner 'Create library ' files.library.target ' ...']);
-disp ([banner software.archiver.call]);
+% Check for build artifacts.
+fprintf ([banner 'Check for object files ... ']);
 
-system (software.archiver.call);
+[check.e.o      ~]  = system (software.check.call.o);
+[check.e.obj    ~]  = system (software.check.call.obj);
 
-disp ([banner 'Done.']);
+disp ('Done.');
+
+
+
+% Remove build artifacts.
+fprintf ([banner 'Remove build artifacts ... ']);
+
+if ~ check.e.o;     delete (files.types.objects.o);     end;
+if ~ check.e.obj;   delete (files.types.objects.obj);   end;
+
+disp ('Done.');
 
 
 
