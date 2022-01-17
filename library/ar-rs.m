@@ -40,4 +40,61 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%
+%%
+%% Variables.
+%%
+%%%%
+
+% Software.
+software.archiver.self  = ' ar ';
+software.archiver.flags = ' rs ';
+software.archiver.call  = [software.archiver.self software.archiver.flags];
+
+
+
+% Files.
+files.self              = ' ar-rs.m ';
+
+files.library.name      = '';
+files.library.source    = ' *.o ';
+files.library.target    = [' lib' files.library.name '.a '];
+
+
+
+% Control flow.
+banner  = ['[' files.self '] '];
+
+
+
+% Call adjustment.
+software.library.call   = [software.library.call files.library.target];
+software.library.call   = [software.library.call files.library.source];
+
+
+
+%%%%
+%%
+%% Build steps.
+%%
+%%%%
+
+% Begin build instruction.
+disp ([banner 'Begin build instruction.']);
+
+
+
+% Call library creation tool.
+disp ([banner 'Create library ' files.library.target ' using: ']);
+disp ([banner software.archiver.call]);
+
+system (software.archiver.call);
+
+disp ([banner 'Done.']);
+
+
+
+% End build instruction.
+disp ([banner 'End build instruction.']);
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
