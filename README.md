@@ -45,6 +45,13 @@
 
 A set of common build routines and steps.
 
+Many projects require similiar build instructions which only differ regarding
+certain parameters specific to their repository, such as the name of the
+compilation target.  Writing them from scratch over and over again for each new
+repository is not efficient and leaves the build routines in an unsynchronised
+state.  In case a critical bug should be found in one of them, all would need
+to be edited by hand in order to fix it.
+
 ## License
 
 This project's license is **GPL 2** (as of June 1991).  The whole license text
