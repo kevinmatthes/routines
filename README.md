@@ -66,7 +66,7 @@ target operating systems.  This aspect benefits the portability of build
 instructions defined this way since, in constrast to `make`, for instance, the
 interpreting software is available not only for UNIX based systems and
 furthermore supports OS-sensitive commands.  Finally, some of the common tasks,
-such as copying, renaming and removing a file from the file system is already
+such as copying, renaming and removing a file from the file system, are already
 handled by Octave itself since it provides dedicated functions therefore.
 
 All scripts are created for and tested with Octave.  Although they might work
