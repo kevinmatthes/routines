@@ -55,7 +55,19 @@ to be edited by hand in order to fix it.
 This repository's aim is it therefore to introduce some templates for default
 instructions which are frequently required for setting up a new repository and
 making it compile.  These build routines are written as scripts for *GNU Octave*
-which is available for free and as an open source application.
+which is available for free and as an open source application for Linux, macOS
+and Windows.
+
+Octave was chosen since it not only is available as described but also offers
+the possibility to run terminal instructions on the host OS.  These instructions
+may be altered depending on *which* OS actually executes Octave at the moment
+such that build routines may be defined with respect to the requirements of the
+target operating systems.  This aspect benefits the portability of build
+instructions defined this way since, in constrast to `make`, for instance, the
+interpreting software is available not only for UNIX based systems and
+furthermore supports OS-sensitive commands.  Finally, some of the common tasks,
+such as copying, renaming and removing a file from the file system is already
+handled by Octave itself since it provides dedicated functions therefore.
 
 All scripts are created for and tested with Octave.  Although they might work
 with MATLAB, as well, a real support is for MATLAB compatibility is not provied,
