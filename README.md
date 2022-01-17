@@ -52,6 +52,11 @@ repository is not efficient and leaves the build routines in an unsynchronised
 state.  In case a critical bug should be found in one of them, all would need
 to be edited by hand in order to fix it.
 
+This repository's aim is it therefore to introduce some templates for default
+instructions which are frequently required for setting up a new repository and
+making it compile.  These build routines are written as scripts for *GNU Octave*
+which is available for free and as an open source application.
+
 All scripts are created for and tested with Octave.  Although they might work
 with MATLAB, as well, a real support is for MATLAB compatibility is not provied,
 at the moment.
