@@ -52,6 +52,10 @@ repository is not efficient and leaves the build routines in an unsynchronised
 state.  In case a critical bug should be found in one of them, all would need
 to be edited by hand in order to fix it.
 
+All scripts are created for and tested with Octave.  Although they might work
+with MATLAB, as well, a real support is for MATLAB compatibility is not provied,
+at the moment.
+
 ## License
 
 This project's license is **GPL 2** (as of June 1991).  The whole license text
