@@ -48,7 +48,7 @@
 
 % Software.
 software.archiver.self  = ' ar ';
-software.archiver.flags = ' rs ';
+software.archiver.flags = ' rsv ';
 software.archiver.call  = [software.archiver.self software.archiver.flags];
 
 
@@ -85,7 +85,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Call library creation tool.
-disp ([banner 'Create library ' files.library.target ' using: ']);
+disp ([banner 'Create library ' files.library.target ' ...']);
 disp ([banner software.archiver.call]);
 
 system (software.archiver.call);
