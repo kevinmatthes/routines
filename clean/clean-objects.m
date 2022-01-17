@@ -47,9 +47,9 @@
 %%%%
 
 % Software.
-software.check.self         = ' test ';
-software.check.flags        = ' -e ';
-software.check.call.base    = [software.check.self software.check.flags];
+software.check.self     = ' test ';
+software.check.flags    = ' -e ';
+software.check.call     = [software.check.self software.check.flags];
 
 
 
@@ -63,12 +63,6 @@ files.types.objects.obj = ' *.obj ';
 
 % Control flow.
 banner  = ['[' files.self '] '];
-
-
-
-% Call adjustment.
-software.check.call.o   = [software.check.call.base files.types.objects.o];
-software.check.call.obj = [software.check.call.base files.types.objects.obj];
 
 
 
@@ -86,8 +80,8 @@ disp ([banner 'Begin build instruction.']);
 % Check for build artifacts.
 fprintf ([banner 'Check for object files ... ']);
 
-[check.e.o      ~]  = system (software.check.call.o);
-[check.e.obj    ~]  = system (software.check.call.obj);
+[check.e.o      ~]  = system ([software.check.call files.types.objects.o]);
+[check.e.obj    ~]  = system ([software.check.call files.types.objects.obj]);
 
 disp ('Done.');
 
