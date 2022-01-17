@@ -68,8 +68,8 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.library.call   = [software.library.call files.library.target];
-software.library.call   = [software.library.call files.library.source];
+software.archiver.call  = [software.archiver.call files.library.target];
+software.archiver.call  = [software.archiver.call files.library.source];
 
 
 
