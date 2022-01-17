@@ -19,7 +19,7 @@
 %%%%
 %%
 %%  FILE
-%%      ar-rs.m
+%%      ar-create.m
 %%
 %%  BRIEF
 %%      Create a static library from object files with `ar`.
@@ -54,7 +54,7 @@ software.archiver.call  = [software.archiver.self software.archiver.flags];
 
 
 % Files.
-files.self              = ' ar-rs.m ';
+files.self              = ' ar-create.m ';
 
 files.library.name      = '';
 files.library.source    = ' *.o ';
