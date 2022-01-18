@@ -49,8 +49,8 @@
 % Files.
 files.self              = ' clean-objects.m ';
 
-files.types.objects.o   = ' *.o ';
-files.types.objects.obj = ' *.obj ';
+files.types.objects.o   = '*.o';
+files.types.objects.obj = '*.obj';
 
 
 
@@ -76,8 +76,7 @@ fprintf ([banner 'Check for object files ... ']);
 count.o     = length (glob (files.types.objects.o));
 count.obj   = length (glob (files.types.objects.obj));
 
-disp ('Done.');
-disp ([banner count.o+count.obj ' found.']);
+disp ([banner char(conunt.o+count.obj) ' found.']);
 
 
 
