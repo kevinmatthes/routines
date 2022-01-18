@@ -56,7 +56,7 @@ software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 % Files.
 files.self      = ' gcc-application.m ';
-files.source    = ' *.c *.o ';
+files.source    = ' *.c ';
 files.target    = '';
 
 
