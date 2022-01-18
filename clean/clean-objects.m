@@ -70,23 +70,23 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Check for build artifacts.
+% Check for and remove object files.
 fprintf ([banner 'Check for object files ... ']);
 
 count.o     = length (glob (files.types.objects.o));
 count.obj   = length (glob (files.types.objects.obj));
 
-disp ([banner char(conunt.o+count.obj) ' found.']);
+if count.o + count.obj;
+    fprintf ('%d found.\n', count.o + count.obj);
+    fprintf ([banner 'Remove build artifacts ... ']);
 
+    if count.o;     delete (files.types.objects.o);     end;
+    if count.obj;   delete (files.types.objects.obj);   end;
 
-
-% Remove build artifacts.
-fprintf ([banner 'Remove build artifacts ... ']);
-
-if count.o;     delete (files.types.objects.o);     end;
-if count.obj;   delete (files.types.objects.obj);   end;
-
-disp ('Done.');
+    disp ('Done.');
+else;
+    disp ('There are no object files.');
+end;
 
 
 
