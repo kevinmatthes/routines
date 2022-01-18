@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      ar-create.m
+%%      gcc-objects.m
 %%
 %%  BRIEF
-%%      Create a static library from object files with `ar`.
+%%      Create object files from C source code using `gcc`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -47,18 +47,15 @@
 %%%%
 
 % Software.
-software.archiver.self  = ' ar ';
-software.archiver.flags = ' rsv ';
-software.archiver.call  = [software.archiver.self software.archiver.flags];
+software.compiler.self  = ' gcc ';
+software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic -c ';
+software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
 
 % Files.
-files.self              = ' ar-create.m ';
-
-files.library.name      = '';
-files.library.source    = ' *.o ';
-files.library.target    = [' lib' files.library.name '.a '];
+files.self      = ' gcc-objects.m ';
+files.source    = ' *.c ';
 
 
 
@@ -68,8 +65,7 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.archiver.call  = [software.archiver.call files.library.target];
-software.archiver.call  = [software.archiver.call files.library.source];
+software.compiler.call  = [software.compiler.call files.source];
 
 
 
@@ -84,11 +80,11 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call library creation tool.
-disp ([banner 'Create library ' files.library.target ' ...']);
-disp ([banner software.archiver.call]);
+% Call C compiler.
+disp ([banner 'Compile object files ...']);
+disp ([banner software.compiler.call]);
 
-system (software.archiver.call);
+system (software.compiler.call);
 
 disp ([banner 'Done.']);
 
