@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      gcc-objects.m
+%%      gcc-application.m
 %%
 %%  BRIEF
-%%      Create object files from C source code using `gcc`.
+%%      Create a target application from C source code using `gcc`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -48,14 +48,15 @@
 
 % Software.
 software.compiler.self  = ' gcc ';
-software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic -c ';
+software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic ';
 software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
 
 % Files.
-files.self      = ' gcc-objects.m ';
+files.self      = ' gcc-application.m ';
 files.source    = ' *.c ';
+files.target    = '';
 
 
 
@@ -66,6 +67,7 @@ banner  = ['[' files.self '] '];
 
 % Call adjustment.
 software.compiler.call  = [software.compiler.call files.source];
+software.compiler.call  = [software.compiler.call ' -o ' files.target];
 
 
 
@@ -81,7 +83,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Call C compiler.
-disp ([banner 'Compile object files ...']);
+disp ([banner 'Compile application ' files.target ' ...']);
 disp ([banner software.compiler.call]);
 
 system (software.compiler.call);
