@@ -22,7 +22,7 @@
 %%      clean-objects.m
 %%
 %%  BRIEF
-%%      Remove object files.
+%%      Remove specific files.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -46,11 +46,20 @@
 %%
 %%%%
 
-% Files.
-files.self              = ' clean-objects.m ';
+% Software.
+software.check.self     = ' test ';
+software.check.flags    = ' -e ';
+software.check.call     = [software.check.self software.check.flags];
 
-files.types.objects.o   = '*.o';
-files.types.objects.obj = '*.obj';
+
+
+% Files.
+files.delete.file1  = '  ';
+% files.delete.file2  = '  ';
+% files.delete.file3  = '  ';
+% ...
+
+files.self          = ' clean-other.m ';
 
 
 
@@ -70,23 +79,20 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Check for and remove object files.
-fprintf ([banner 'Check for object files ... ']);
+% Check for and remove specified files.
+fprintf ([banner 'Check for and remove specified files ... ']);
 
-count.o     = length (glob (files.types.objects.o));
-count.obj   = length (glob (files.types.objects.obj));
+[check.file1    ~]  = system ([software.check.call files.delete.file1]);
+% [check.file2    ~]  = system ([software.check.call files.delete.file2]);
+% [check.file3    ~]  = system ([software.check.call files.delete.file3]);
+% ...
 
-if count.o + count.obj;
-    fprintf ('%d found.\n', count.o + count.obj);
-    fprintf ([banner 'Remove those ... ']);
+if ~ check.file1;   delete (files.delete.file1);    end;
+% if ~ check.file2;   delete (files.delete.file2);    end;
+% if ~ check.file3;   delete (files.delete.file3);    end;
+% ...
 
-    if count.o;     delete (files.types.objects.o);     end;
-    if count.obj;   delete (files.types.objects.obj);   end;
-
-    disp ('Done.');
-else;
-    disp ('There are no object files.');
-end;
+disp ('Done.');
 
 
 

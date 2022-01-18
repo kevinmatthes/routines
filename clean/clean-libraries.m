@@ -22,7 +22,7 @@
 %%      clean-libraries.m
 %%
 %%  BRIEF
-%%      Remove object files.
+%%      Remove compiled libraries.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -72,7 +72,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Check for and remove object files.
+% Check for and remove libraries.
 fprintf ([banner 'Check for libraries ... ']);
 
 count.a     = length (glob (files.types.objects.a));
