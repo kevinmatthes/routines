@@ -79,7 +79,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Check for and remove specified files.
+% Check for and remove the specified files.
 fprintf ([banner 'Check for and remove specified files ... ']);
 
 [check.file1    ~]  = system ([software.check.call files.delete.file1]);
