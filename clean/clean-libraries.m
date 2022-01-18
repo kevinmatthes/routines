@@ -19,7 +19,7 @@
 %%%%
 %%
 %%  FILE
-%%      clean-objects.m
+%%      clean-libraries.m
 %%
 %%  BRIEF
 %%      Remove object files.
@@ -47,10 +47,12 @@
 %%%%
 
 % Files.
-files.self              = ' clean-objects.m ';
+files.self              = ' clean-libraries.m ';
 
-files.types.objects.o   = '*.o';
-files.types.objects.obj = '*.obj';
+files.types.objects.a   = '*.a';
+files.types.objects.dll = '*.dll';
+files.types.objects.lib = '*.lib';
+files.types.objects.so  = '*.so';
 
 
 
@@ -71,21 +73,25 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Check for and remove object files.
-fprintf ([banner 'Check for object files ... ']);
+fprintf ([banner 'Check for libraries ... ']);
 
-count.o     = length (glob (files.types.objects.o));
-count.obj   = length (glob (files.types.objects.obj));
+count.a     = length (glob (files.types.objects.a));
+count.dll   = length (glob (files.types.objects.dll));
+count.lib   = length (glob (files.types.objects.lib));
+count.so    = length (glob (files.types.objects.so));
 
-if count.o + count.obj;
-    fprintf ('%d found.\n', count.o + count.obj);
+if count.a + count.dll + count.lib + count.so;
+    fprintf ('%d found.\n', count.a + count.dll + count.lib + count.so);
     fprintf ([banner 'Remove build artifacts ... ']);
 
-    if count.o;     delete (files.types.objects.o);     end;
-    if count.obj;   delete (files.types.objects.obj);   end;
+    if count.a;     delete (files.types.objects.a);     end;
+    if count.dll;   delete (files.types.objects.dll);   end;
+    if count.lib;   delete (files.types.objects.lib);   end;
+    if count.so;    delete (files.types.objects.so);    end;
 
     disp ('Done.');
 else;
-    disp ('There are no object files.');
+    disp ('There are no libraries.');
 end;
 
 
