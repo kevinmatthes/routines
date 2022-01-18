@@ -54,9 +54,9 @@ software.check.call     = [software.check.self software.check.flags];
 
 
 % Files.
-files.delete.file1  = '  ';
-% files.delete.file2  = '  ';
-% files.delete.file3  = '  ';
+files.delete.file1  = '';
+% files.delete.file2  = '';
+% files.delete.file3  = '';
 % ...
 
 files.self          = ' clean-other.m ';
