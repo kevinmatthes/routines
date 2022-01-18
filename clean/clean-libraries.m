@@ -82,7 +82,7 @@ count.so    = length (glob (files.types.objects.so));
 
 if count.a + count.dll + count.lib + count.so;
     fprintf ('%d found.\n', count.a + count.dll + count.lib + count.so);
-    fprintf ([banner 'Remove build artifacts ... ']);
+    fprintf ([banner 'Remove those ... ']);
 
     if count.a;     delete (files.types.objects.a);     end;
     if count.dll;   delete (files.types.objects.dll);   end;

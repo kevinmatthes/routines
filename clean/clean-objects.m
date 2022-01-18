@@ -78,7 +78,7 @@ count.obj   = length (glob (files.types.objects.obj));
 
 if count.o + count.obj;
     fprintf ('%d found.\n', count.o + count.obj);
-    fprintf ([banner 'Remove build artifacts ... ']);
+    fprintf ([banner 'Remove those ... ']);
 
     if count.o;     delete (files.types.objects.o);     end;
     if count.obj;   delete (files.types.objects.obj);   end;
