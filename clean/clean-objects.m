@@ -46,13 +46,6 @@
 %%
 %%%%
 
-% Software.
-software.check.self     = ' test ';
-software.check.flags    = ' -e ';
-software.check.call     = [software.check.self software.check.flags];
-
-
-
 % Files.
 files.self              = ' clean-objects.m ';
 
@@ -80,18 +73,19 @@ disp ([banner 'Begin build instruction.']);
 % Check for build artifacts.
 fprintf ([banner 'Check for object files ... ']);
 
-[check.e.o      ~]  = system ([software.check.call files.types.objects.o]);
-[check.e.obj    ~]  = system ([software.check.call files.types.objects.obj]);
+count.o     = length (glob (files.types.objects.o));
+count.obj   = length (glob (files.types.objects.obj));
 
 disp ('Done.');
+disp ([banner count.o+count.obj ' found.']);
 
 
 
 % Remove build artifacts.
 fprintf ([banner 'Remove build artifacts ... ']);
 
-if ~ check.e.o;     delete (files.types.objects.o);     end;
-if ~ check.e.obj;   delete (files.types.objects.obj);   end;
+if count.o;     delete (files.types.objects.o);     end;
+if count.obj;   delete (files.types.objects.obj);   end;
 
 disp ('Done.');
 
