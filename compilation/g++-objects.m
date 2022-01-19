@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      gcc-objects.m
+%%      g++-objects.m
 %%
 %%  BRIEF
-%%      Create object files from C source code using `gcc`.
+%%      Create object files from C source code using `g++`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -47,14 +47,14 @@
 %%%%
 
 % Software.
-software.compiler.self  = ' gcc ';
+software.compiler.self  = ' g++ ';
 software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic -c ';
 software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
 
 % Files.
-files.self      = ' gcc-objects.m ';
+files.self      = ' g++-objects.m ';
 files.source    = ' *.c ';
 
 

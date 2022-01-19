@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      gcc-application.m
+%%      g++-application.m
 %%
 %%  BRIEF
-%%      Create a target application from sources using `gcc`.
+%%      Create a target application from sources using `g++`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -47,7 +47,7 @@
 %%%%
 
 % Software.
-software.compiler.self  = ' gcc ';
+software.compiler.self  = ' g++ ';
 software.compiler.link  = '';
 software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic ';
 software.compiler.call  = [software.compiler.self software.compiler.flags];
@@ -55,7 +55,7 @@ software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
 % Files.
-files.self      = ' gcc-application.m ';
+files.self      = ' g++-application.m ';
 files.source    = ' *.c ';
 files.target    = '';
 
