@@ -19,7 +19,7 @@
 %%%%
 %%
 %%  FILE
-%%      gcc-application.m
+%%      doxygen-compile.m
 %%
 %%  BRIEF
 %%      Create a target application from sources using `gcc`.
@@ -55,7 +55,7 @@ software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
 % Files.
-files.self      = ' gcc-application.m ';
+files.self      = ' doxygen-compile.m ';
 files.source    = ' *.c ';
 files.target    = '';
 
