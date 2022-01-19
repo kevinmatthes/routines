@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      clean-libraries.m
+%%      clean-documentation.m
 %%
 %%  BRIEF
-%%      Remove compiled libraries.
+%%      Remove the automatically compiled documentation.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -47,7 +47,7 @@
 %%%%
 
 % Files.
-files.self              = ' clean-libraries.m ';
+files.self              = ' clean-documentation.m ';
 
 files.types.objects.a   = '*.a';
 files.types.objects.dll = '*.dll';
@@ -72,8 +72,8 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Check for and remove libraries.
-fprintf ([banner 'Check for libraries ... ']);
+% Check for and remove documentation.
+fprintf ([banner 'Check for documentation ... ']);
 
 count.a     = length (glob (files.types.objects.a));
 count.dll   = length (glob (files.types.objects.dll));
@@ -91,7 +91,7 @@ if count.a + count.dll + count.lib + count.so;
 
     disp ('Done.');
 else;
-    disp ('There are no libraries.');
+    disp ('There is no documentation.');
 end;
 
 
