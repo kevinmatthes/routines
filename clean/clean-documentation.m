@@ -46,13 +46,23 @@
 %%
 %%%%
 
+% Software.
+software.check.self     = ' test ';
+software.check.flags    = ' -d ';
+software.check.call     = [software.check.self software.check.flags];
+
+
+
+% Directories.
+directories.delete.dir1 = '';
+% directories.delete.dir2 = '';
+% directories.delete.dir3 = '';
+% ...
+
+
+
 % Files.
 files.self              = ' clean-documentation.m ';
-
-files.types.objects.a   = '*.a';
-files.types.objects.dll = '*.dll';
-files.types.objects.lib = '*.lib';
-files.types.objects.so  = '*.so';
 
 
 
@@ -73,26 +83,31 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Check for and remove documentation.
-fprintf ([banner 'Check for documentation ... ']);
+fprintf ([banner 'Check for and remove documentation directories... ']);
 
-count.a     = length (glob (files.types.objects.a));
-count.dll   = length (glob (files.types.objects.dll));
-count.lib   = length (glob (files.types.objects.lib));
-count.so    = length (glob (files.types.objects.so));
+[check.dir1 ~]  = system (software.check.call directories.delete.dir1);
+% [check.dir2 ~]  = system (software.check.call directories.delete.dir2);
+% [check.dir3 ~]  = system (software.check.call directories.delete.dir3);
+% ...
 
-if count.a + count.dll + count.lib + count.so;
-    fprintf ('%d found.\n', count.a + count.dll + count.lib + count.so);
-    fprintf ([banner 'Remove those ... ']);
-
-    if count.a;     delete (files.types.objects.a);     end;
-    if count.dll;   delete (files.types.objects.dll);   end;
-    if count.lib;   delete (files.types.objects.lib);   end;
-    if count.so;    delete (files.types.objects.so);    end;
-
-    disp ('Done.');
-else;
-    disp ('There is no documentation.');
+if ~ check.dir1;
+    delete ([directories.delete.dir1 '/*']);
+    rmdir (directories.delete.dir1);
 end;
+
+% if ~ check.dir2;
+%     delete ([directories.delete.dir2 '/*']);
+%     rmdir (directories.delete.dir2);
+% end;
+
+% if ~ check.dir3;
+%     delete ([directories.delete.dir3 '/*']);
+%     rmdir (directories.delete.dir3);
+% end;
+
+% ...
+
+disp ('Done.');
 
 
 
