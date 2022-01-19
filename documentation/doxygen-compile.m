@@ -47,17 +47,13 @@
 %%%%
 
 % Software.
-software.compiler.self  = ' gcc ';
-software.compiler.link  = '';
-software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic ';
-software.compiler.call  = [software.compiler.self software.compiler.flags];
+software.compiler.self  = ' doxygen ';
 
 
 
 % Files.
 files.self      = ' doxygen-compile.m ';
-files.source    = ' *.c ';
-files.target    = '';
+files.source    = '';
 
 
 
@@ -68,8 +64,6 @@ banner  = ['[' files.self '] '];
 
 % Call adjustment.
 software.compiler.call  = [software.compiler.call files.source];
-software.compiler.call  = [software.compiler.call software.compiler.link];
-software.compiler.call  = [software.compiler.call ' -o ' files.target];
 
 
 
@@ -84,8 +78,8 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call C compiler.
-disp ([banner 'Compile application ' files.target ' ...']);
+% Call Doxygen.
+disp ([banner 'Compile Doxygen documentation ...']);
 disp ([banner software.compiler.call]);
 
 system (software.compiler.call);
