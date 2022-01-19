@@ -55,7 +55,7 @@ software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 % Files.
 files.self      = ' g++-objects.m ';
-files.source    = ' *.c ';
+files.source    = ' *.cpp ';
 
 
 
