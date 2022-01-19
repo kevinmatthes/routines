@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      clean-libraries.m
+%%      clean-manuals.m
 %%
 %%  BRIEF
-%%      Remove compiled libraries.
+%%      Remove compiled manuals.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -47,12 +47,9 @@
 %%%%
 
 % Files.
-files.self              = ' clean-libraries.m ';
+files.self              = ' clean-manuals.m ';
 
-files.types.objects.a   = '*.a';
-files.types.objects.dll = '*.dll';
-files.types.objects.lib = '*.lib';
-files.types.objects.so  = '*.so';
+files.types.objects.pdf = '*.pdf';
 
 
 
@@ -72,26 +69,20 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Check for and remove libraries.
-fprintf ([banner 'Check for libraries ... ']);
+% Check for and remove manuals.
+fprintf ([banner 'Check for manuals ... ']);
 
-count.a     = length (glob (files.types.objects.a));
-count.dll   = length (glob (files.types.objects.dll));
-count.lib   = length (glob (files.types.objects.lib));
-count.so    = length (glob (files.types.objects.so));
+count.pdf   = length (glob (files.types.objects.pdf));
 
-if count.a + count.dll + count.lib + count.so;
-    fprintf ('%d found.\n', count.a + count.dll + count.lib + count.so);
+if count.pdf;
+    fprintf ('%d found.\n', count.pdf);
     fprintf ([banner 'Remove those ... ']);
 
-    if count.a;     delete (files.types.objects.a);     end;
-    if count.dll;   delete (files.types.objects.dll);   end;
-    if count.lib;   delete (files.types.objects.lib);   end;
-    if count.so;    delete (files.types.objects.so);    end;
+    if count.pdf;   delete (files.types.objects.pdf);   end;
 
     disp ('Done.');
 else;
-    disp ('There are no libraries.');
+    disp ('There are no manuals.');
 end;
 
 
