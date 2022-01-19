@@ -22,7 +22,7 @@
 %%      g++-objects.m
 %%
 %%  BRIEF
-%%      Create object files from C source code using `g++`.
+%%      Create object files from C++ source code using `g++`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -80,7 +80,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call C compiler.
+% Call C++ compiler.
 disp ([banner 'Compile object files ...']);
 disp ([banner software.compiler.call]);
 

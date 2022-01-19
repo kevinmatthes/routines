@@ -84,7 +84,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call C compiler.
+% Call C++ compiler.
 disp ([banner 'Compile application ' files.target ' ...']);
 disp ([banner software.compiler.call]);
 
