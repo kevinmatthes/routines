@@ -76,8 +76,10 @@ fprintf ([banner 'Check for object files ... ']);
 count.o     = length (glob (files.types.objects.o));
 count.obj   = length (glob (files.types.objects.obj));
 
-if count.o + count.obj;
-    fprintf ('%d found.\n', count.o + count.obj);
+count.sum   = count.o + count.obj;
+
+if count.sum;
+    fprintf ('%d found.\n', count.sum);
     fprintf ([banner 'Remove those ... ']);
 
     if count.o;     delete (files.types.objects.o);     end;

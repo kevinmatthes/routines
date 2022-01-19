@@ -80,8 +80,10 @@ count.dll   = length (glob (files.types.objects.dll));
 count.lib   = length (glob (files.types.objects.lib));
 count.so    = length (glob (files.types.objects.so));
 
-if count.a + count.dll + count.lib + count.so;
-    fprintf ('%d found.\n', count.a + count.dll + count.lib + count.so);
+count.sum   = count.a + count.dll + count.lib + count.so;
+
+if count.sum;
+    fprintf ('%d found.\n', count.sum);
     fprintf ([banner 'Remove those ... ']);
 
     if count.a;     delete (files.types.objects.a);     end;
