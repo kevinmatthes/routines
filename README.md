@@ -99,4 +99,39 @@ All scripts are created for and tested with Octave.  Although they might work
 with MATLAB, as well, a real support is for MATLAB compatibility is not provied,
 at the moment.
 
+### How to Apply the Build Scripts
+
+Each build script contains the instructions in order to perform exactly one
+common task of a build routine.  These tasks are, for instance, compiling an
+application, creating a library, writing the documentation and cleaning up at
+the end.
+
+In order to call a build instruction, it must be given as command line parameter
+to GNU Octave, for instance:
+
+```
+octave clean-objects.m
+# or
+octave-cli clean-objects.m
+```
+
+Just as with the standard-`make`, the scripts can be nested regarding their call
+hierarchy such that single scripts can be stored in one directory, say the main
+source code directory of a repository, and invoked by other scripts in another
+directory, such as the project's root directory.  Within the invocation script,
+one should make sure that the working directory of Octave is set accordingly
+*before* another script is called.  Otherwise, the called script will look for
+the given files in the wrong directory.
+
+In general, a common `makefile` can be replaced by Octave scripts by
+substituting each build command by a dedicated script.  That way, the build
+routine does not need to be replaced all at once but instruction by instruction
+what offers furthermore the possibility to identify obsolete build steps which
+are not required anymore.
+
+Each file provided by this repository is a template for the designated task
+whose variables need to be adjusted before an initial invocation in the binding
+repository.  This requires the users only to know about variable definitions as
+well as string concatenation in Octave.
+
 <!----------------------------------------------------------------------------->
