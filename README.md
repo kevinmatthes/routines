@@ -120,14 +120,13 @@ hierarchy such that single scripts can be stored in one directory, say the main
 source code directory of a repository, and invoked by other scripts in another
 directory, such as the project's root directory.  Within the invocation script,
 one should make sure that the working directory of Octave is set accordingly
-*before* another script is called.  Otherwise, the called script will look for
+*before* another script is called.  Otherwise, the called script would look for
 the given files in the wrong directory.
 
 In general, a common `makefile` can be replaced by Octave scripts by
 substituting each build command by a dedicated script.  That way, the build
 routine does not need to be replaced all at once but instruction by instruction
-what offers furthermore the possibility to identify obsolete build steps which
-are not required anymore.
+what offers furthermore the possibility to identify obsolete build steps.
 
 Each file provided by this repository is a template for the designated task
 whose variables need to be adjusted before an initial invocation in the binding
