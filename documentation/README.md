@@ -47,7 +47,7 @@ This directory provides different default build instructions in order to write
 documentations automatically.
 
 Since there are various documentation creation tools, the scripts are named
-according to the software it utilises as well as the action it performs.  Which
+according to the software they utilise as well as the action it performs.  Which
 applications are supported in detail and which of their functionalities are
 called by the scripts will be explained in detail in the following sections.
 
