@@ -41,4 +41,30 @@
 
 # `./library/`
 
+## Description
+
+This directory provides different default build instructions in order to create
+and maintain libraries.
+
+Since there are multiple possible applications for the creation and maintainance
+of libraries, this repository offers various routines using some of the most
+common ones.  The used software will be listed in "Software Requirements"
+section of this README.
+
+Each provided script is named according to the library tool it uses as well as
+the action on libraries it performs.
+
+## Software Requirements
+
+Despite of GNU Octave in order to execute the build scripts, this directory
+requires the user to have the following applications installed.
+
+* `ar`
+
+## Supported Actions
+
+| Action            | `ar`  |
+|:------------------|:-----:|
+| library creation  | yes   |
+
 <!----------------------------------------------------------------------------->
