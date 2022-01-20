@@ -45,6 +45,8 @@
 
 A set of common build routines and steps.
 
+## Introduction
+
 Many projects require similiar build instructions which only differ regarding
 certain parameters specific to their repository, such as the name of the
 compilation target.  Writing them from scratch over and over again for each new
