@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      doxygen-compile.m
+%%      pandoc-compile.m
 %%
 %%  BRIEF
-%%      Create a target application from sources using `gcc`.
+%%      Create a documentation from sources using `pandoc`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -47,13 +47,18 @@
 %%%%
 
 % Software.
-software.compiler.self  = ' doxygen ';
+software.compiler.self  = ' pandoc ';
+software.compiler.flags = ' -N ';
+software.compiler.call  = [software.compiler.self software.compiler.flags];
+
+software.lister.self    = ' cat ';
 
 
 
 % Files.
-files.self      = ' doxygen-compile.m ';
+files.self      = ' pandoc-compile.m ';
 files.source    = '';
+files.target    = '';
 
 
 
@@ -63,7 +68,9 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.compiler.call  = [software.compiler.call files.source];
+software.lister.call    = [software.lister.self files.source];
+software.compiler.call  = [software.lister.call ' | ' software.compiler.call];
+software.compiler.call  = [software.compiler.call ' -o ' files.target];
 
 
 
@@ -78,8 +85,8 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call Doxygen.
-disp ([banner 'Compile Doxygen documentation ...']);
+% Call pandoc.
+disp ([banner 'Compile Pandoc documentation ...']);
 disp ([banner software.compiler.call]);
 
 system (software.compiler.call);
