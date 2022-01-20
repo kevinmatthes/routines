@@ -22,7 +22,7 @@
 %%      doxygen-compile.m
 %%
 %%  BRIEF
-%%      Create a target application from sources using `gcc`.
+%%      Create a documentation from sources using `doxygen`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
