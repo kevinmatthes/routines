@@ -85,7 +85,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call pandoc.
+% Call Pandoc.
 disp ([banner 'Compile Pandoc documentation ...']);
 disp ([banner software.compiler.call]);
 
