@@ -41,4 +41,46 @@
 
 # `./documentation/`
 
+## Description
+
+This directory provides different default build instructions in order to write
+documentations automatically.
+
+Since there are various documentation creation tools, the scripts are named
+according to the software it utilises as well as the action it performs.  Which
+applications are supported in detail and which of their functionalities are
+called by the scripts will be explained in detail in the following sections.
+
+## Software Requirements
+
+Despite GNU Octave in order to execute the build scripts, this directory
+requires the user to have the following applications installed.
+
+* `cat`
+* `doxygen`
+* `pandoc`
+
+### Doxygen
+
+Doxygen will be utilised in order to create a source code documentation for the
+contained C-style code.
+
+For more details regarding Doxygen, please consult the official manual.
+
+### Pandoc
+
+Pandoc is required in order to compile a \LaTeX manual from Markdown sources.
+This feature is frequently required for the creation of repository manuals from
+the contained default files, such as the READMEs and the respective LICENSE.
+
+For more details regarding Pandoc, please consult the official manual.
+
+## Supported Actions
+
+| Action                | `doxygen` | `pandoc`  |
+|:----------------------|:---------:|:---------:|
+| HTML creation         | yes       | no        |
+| \LaTeX creation       | yes       | yes       |
+| \LaTeX compilation    | no        | yes       |
+
 <!----------------------------------------------------------------------------->
