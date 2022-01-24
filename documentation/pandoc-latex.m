@@ -51,8 +51,6 @@ software.compiler.self  = ' pandoc ';
 software.compiler.flags = ' -N ';
 software.compiler.call  = [software.compiler.self software.compiler.flags];
 
-software.lister.self    = ' cat ';
-
 
 
 % Files.
@@ -68,8 +66,7 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.lister.call    = [software.lister.self files.source];
-software.compiler.call  = [software.lister.call ' | ' software.compiler.call];
+software.compiler.call  = [software.compiler.call files.source];
 software.compiler.call  = [software.compiler.call ' -o ' files.target];
 
 
