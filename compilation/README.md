@@ -59,4 +59,11 @@ requires the user to have the following applications installed.
 * `g++`
 * `gcc`
 
+## Supported Actions
+
+| Action                            | `g++` | `gcc` |
+|:----------------------------------|:-----:|:-----:|
+| object file compilation           | yes   | yes   |
+| target application compilation    | yes   | yes   |
+
 <!----------------------------------------------------------------------------->
