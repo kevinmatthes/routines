@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      pandoc-compile.m
+%%      pandoc-latex.m
 %%
 %%  BRIEF
-%%      Create a documentation from sources using `pandoc`.
+%%      Create a LaTeX documentation from sources using `pandoc`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -56,7 +56,7 @@ software.lister.self    = ' cat ';
 
 
 % Files.
-files.self      = ' pandoc-compile.m ';
+files.self      = ' pandoc-latex.m ';
 files.source    = '';
 files.target    = '';
 
