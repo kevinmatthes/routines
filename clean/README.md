@@ -55,7 +55,7 @@ requires the user to have the following applications installed.
 
 ### `test`
 
-`test` is a UNIX essential which unfortunately not available on Windows, by
+`test` is a UNIX essential which unfortunately is not available on Windows, by
 default.  In order to solve this problem, there are some portations of this
 command to Windows, for instance https://github.com/Ranplax/testOnWindows which
 is written in Rust.
