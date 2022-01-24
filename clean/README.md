@@ -41,4 +41,32 @@
 
 # `./clean/`
 
+## Description
+
+This directory provides different default build instructions in order to remove
+build artifacts.
+
+## Software Requirements
+
+Despite GNU Octave in order to execute the build scripts, this directory
+requires the user to have the following applications installed.
+
+* `test`
+
+### `test`
+
+`test` is a UNIX essential which unfortunately not available on Windows, by
+default.  In order to solve this problem, there some portations of the command
+to Windows, for instance https://github.com/Ranplax/testOnWindows which is
+written in Rust.
+
+## Supported Actions
+
+* clean whole documentation (remove documentation directories and their build
+  artifacts)
+* clean libraries
+* clean manuals (static documents)
+* clean object files
+* clean specific files
+
 <!----------------------------------------------------------------------------->
