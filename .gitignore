@@ -43,6 +43,7 @@
 # Build artifacts.
 *.a
 *.o
+*.pdf
 
 # Files for testing.
 test
