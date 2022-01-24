@@ -39,12 +39,12 @@
 --
 ------------------------------------------------------------------------------->
 
-# `./installation/`
+# `./uninstallation/`
 
 ## Description
 
-This directory provides different default build instructions in order to install
-software or libraries, for instance.
+This directory provides different default build instructions in order to
+uninstall software or libraries, for instance.
 
 At the moment, there is no such routine, yet.
 
