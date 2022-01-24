@@ -47,8 +47,8 @@ This directory provides different default build instructions in order to compile
 some sources with respect to certain settings.
 
 Since there is a huge variety regarding languages and compilers, the scripts are
-named according to the software they utilise as well as the action they it
+named according to the software they utilise as well as the action it
 performs.  Which applications are supported in particular and which of their
-functionality are used will be explained in detail in the following sections.
+functionalities are used will be explained in detail in the following sections.
 
 <!----------------------------------------------------------------------------->
