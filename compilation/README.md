@@ -51,4 +51,12 @@ named according to the software they utilise as well as the action it
 performs.  Which applications are supported in particular and which of their
 functionalities are used will be explained in detail in the following sections.
 
+## Software Requirements
+
+Despite GNU Octave in order to execute the build scripts, this directory
+requires the user to have the following applications installed.
+
+* `g++`
+* `gcc`
+
 <!----------------------------------------------------------------------------->

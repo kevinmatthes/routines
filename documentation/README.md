@@ -56,7 +56,6 @@ called by the scripts will be explained in detail in the following sections.
 Despite GNU Octave in order to execute the build scripts, this directory
 requires the user to have the following applications installed.
 
-* `cat`
 * `doxygen`
 * `pandoc`
 
