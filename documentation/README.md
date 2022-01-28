@@ -81,5 +81,18 @@ For more details regarding Pandoc, please consult the official manual.
 | HTML creation         | yes       | no        |
 | \LaTeX\ creation      | yes       | yes       |
 | \LaTeX\ compilation   | no        | yes       |
+| repository manual     | no        | yes       |
+
+### Repository Manuals
+
+The build instruction provided by `pandoc-repository.m` requires not only Pandoc
+for the final compilation but relies furthermore on `docs-snippets` which is
+bound by this repository, as well.
+
+`docs-snippets`, see https://github.com/kevinmatthes/docs-snippets, is a storage
+of default configuration instructions for documentations, such as common Pandoc
+meta data.  Since it is not a software but a collection of static files, it is
+not named in the "Software Requirements" section.  Since all paths may be
+altered as desired, substituting it is no problem.
 
 <!----------------------------------------------------------------------------->
