@@ -19,7 +19,7 @@
 %%%%
 %%
 %%  FILE
-%%      repository-manual.m
+%%      pandoc-repository.m
 %%
 %%  BRIEF
 %%      Create a LaTeX documentation for this repository using `pandoc`.
@@ -83,18 +83,6 @@ files.source        = [files.source directories.yaml manual.paper '.yaml '];
 files.source        = [files.source directories.yaml manual.style '.yaml '];
 files.source        = [files.source files.newpage];
 files.source        = [files.source ' ./README.md '];
-files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./clean/README.md '];
-files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./compilation/README.md '];
-files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./documentation/README.md '];
-files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./installation/README.md '];
-files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./library/README.md '];
-files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./uninstallation/README.md '];
 files.source        = [files.source files.newpage];
 files.source        = [files.source files.license];
 files.source        = [files.source files.newpage];
