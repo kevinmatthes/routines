@@ -61,8 +61,8 @@ software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
 % Directories.
-directories.md      = './markdown/';
-directories.yaml    = './yaml/';
+directories.md      = './docs-snippets/markdown/';
+directories.yaml    = './docs-snippets/yaml/';
 
 
 
@@ -84,11 +84,17 @@ files.source        = [files.source directories.yaml manual.style '.yaml '];
 files.source        = [files.source files.newpage];
 files.source        = [files.source ' ./README.md '];
 files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./doxygen/README.md '];
+files.source        = [files.source ' ./clean/README.md '];
 files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./markdown/README.md '];
+files.source        = [files.source ' ./compilation/README.md '];
 files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./yaml/README.md '];
+files.source        = [files.source ' ./documentation/README.md '];
+files.source        = [files.source files.newpage];
+files.source        = [files.source ' ./installation/README.md '];
+files.source        = [files.source files.newpage];
+files.source        = [files.source ' ./library/README.md '];
+files.source        = [files.source files.newpage];
+files.source        = [files.source ' ./uninstallation/README.md '];
 files.source        = [files.source files.newpage];
 files.source        = [files.source files.license];
 files.source        = [files.source files.newpage];
