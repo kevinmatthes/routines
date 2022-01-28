@@ -68,7 +68,7 @@ For more details regarding Doxygen, please consult the official manual.
 
 ### Pandoc
 
-Pandoc is required in order to compile a \LaTeX manual from Markdown sources.
+Pandoc is required in order to compile a \LaTeX\ manual from Markdown sources.
 This feature is frequently required for the creation of repository manuals from
 the contained default files, such as the READMEs and the respective LICENSE.
 
