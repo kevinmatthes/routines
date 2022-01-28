@@ -89,8 +89,8 @@ The build instruction provided by `pandoc-repository.m` requires not only Pandoc
 for the final compilation but relies furthermore on `docs-snippets` which is
 bound by this repository, as well.
 
-`docs-snippets`, see https://github.com/kevinmatthes/docs-snippets, is a storage
-of default configuration instructions for documentations, such as common Pandoc
+`docs-snippets`, see https://github.com/kevinmatthes/docs-snippets, stores
+default configuration instructions for documentations, such as common Pandoc
 meta data.  Since it is not a software but a collection of static files, it is
 not named in the "Software Requirements" section.  Due to all paths being
 adjustable as desired, substituting this submodule is no problem.
