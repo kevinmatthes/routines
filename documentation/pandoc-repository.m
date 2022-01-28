@@ -75,7 +75,7 @@ files.license       = [directories.md 'heading-license.md ' files.license];
 
 files.newpage       = [directories.md 'newpage.md '];
 
-files.self          = ' repository-manual.m ';
+files.self          = ' pandoc-repository.m ';
 
 files.source        = ' ./authors.yaml ./project.yaml ';
 files.source        = [files.source directories.yaml manual.language '.yaml '];
