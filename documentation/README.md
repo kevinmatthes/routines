@@ -79,7 +79,7 @@ For more details regarding Pandoc, please consult the official manual.
 | Action                | `doxygen` | `pandoc`  |
 |:----------------------|:---------:|:---------:|
 | HTML creation         | yes       | no        |
-| \LaTeX creation       | yes       | yes       |
-| \LaTeX compilation    | no        | yes       |
+| \LaTeX\ creation      | yes       | yes       |
+| \LaTeX\ compilation   | no        | yes       |
 
 <!----------------------------------------------------------------------------->
