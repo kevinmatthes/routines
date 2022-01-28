@@ -82,8 +82,8 @@ disp ([banner 'Begin build instruction.']);
 
 % Call C compiler.
 disp ([banner 'Compile object files ...']);
-disp ([banner software.compiler.call]);
 
+disp (software.compiler.call);
 system (software.compiler.call);
 
 disp ([banner 'Done.']);

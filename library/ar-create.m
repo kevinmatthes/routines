@@ -86,8 +86,8 @@ disp ([banner 'Begin build instruction.']);
 
 % Call library creation tool.
 disp ([banner 'Create library ' files.library.target ' ...']);
-disp ([banner software.archiver.call]);
 
+disp (software.archiver.call);
 system (software.archiver.call);
 
 disp ([banner 'Done.']);

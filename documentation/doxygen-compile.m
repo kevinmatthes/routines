@@ -80,8 +80,8 @@ disp ([banner 'Begin build instruction.']);
 
 % Call Doxygen.
 disp ([banner 'Compile Doxygen documentation ...']);
-disp ([banner software.compiler.call]);
 
+disp (software.compiler.call);
 system (software.compiler.call);
 
 disp ([banner 'Done.']);
