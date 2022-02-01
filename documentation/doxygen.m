@@ -47,15 +47,15 @@
 %%%%
 
 % Software.
-software.check.self     = ' test ';
-software.check.flags    = ' -e ';
-software.check.call     = [software.check.self software.check.flags];
+software.check.self         = ' test ';
+software.check.flags        = ' -e ';
+software.check.call.self    = [software.check.self software.check.flags];
 
 software.compiler.self  = ' doxygen ';
 
-software.make.self      = ' make ';
-software.make.flags     = ' -C ';
-software.make.call      = [software.make.self software.make.flags];
+software.make.self  = ' make ';
+software.make.flags = ' -C ';
+software.make.call  = [software.make.self software.make.flags];
 
 
 
@@ -79,8 +79,8 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.check.call.pdf = [software.check.call files.refman.pdf];
-software.check.call.tex = [software.check.call files.refman.tex];
+software.check.call.pdf = [software.check.call.self files.refman.pdf];
+software.check.call.tex = [software.check.call.self files.refman.tex];
 software.compiler.call  = [software.compiler.self files.source];
 software.make.call      = [software.make.call directories.doxygen.make];
 
@@ -100,8 +100,8 @@ disp ([banner 'Begin build instruction.']);
 % Call Doxygen.
 disp ([banner 'Compile Doxygen documentation ...']);
 
-[software.compiler.result ~] = disp (software.compiler.call);
-system (software.compiler.call);
+disp (software.compiler.call);
+[software.compiler.result ~] = system (software.compiler.call);
 
 disp ([banner 'Done.']);
 
