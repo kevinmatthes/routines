@@ -39,12 +39,11 @@
 --
 ------------------------------------------------------------------------------->
 
-# `./installation/`
+# `./composition/`
 
 ## Description
 
-This directory provides different default build instructions in order to install
-software or libraries, for instance.
+This directory provides different common compositions of build instructions.
 
 At the moment, there is no such routine, yet.
 
