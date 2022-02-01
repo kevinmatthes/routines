@@ -80,7 +80,7 @@ For more details regarding Pandoc, please consult the official manual.
 |:----------------------|:---------:|:---------:|
 | HTML creation         | yes       | no        |
 | \LaTeX\ creation      | yes       | yes       |
-| \LaTeX\ compilation   | no        | yes       |
+| \LaTeX\ compilation   | yes       | yes       |
 | repository manual     | no        | yes       |
 
 ### Repository Manuals
