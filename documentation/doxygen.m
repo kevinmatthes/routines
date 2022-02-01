@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      doxygen-latex.m
+%%      doxygen.m
 %%
 %%  BRIEF
-%%      Create a LaTeX documentation from sources using `doxygen`.
+%%      Create a complete documentation from sources using `doxygen`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -61,7 +61,7 @@ directories.make.doxygen    = '';
 
 
 % Files.
-files.self      = ' doxygen-latex.m ';
+files.self      = ' doxygen.m ';
 files.source    = '';
 
 
