@@ -57,7 +57,9 @@ Despite GNU Octave in order to execute the build scripts, this directory
 requires the user to have the following applications installed.
 
 * `doxygen`
+* `make`
 * `pandoc`
+* `test`
 
 ### Doxygen
 
@@ -65,6 +67,11 @@ Doxygen will be utilised in order to create a source code documentation for the
 contained C-style code.
 
 For more details regarding Doxygen, please consult the official manual.
+
+### Make
+
+Doxygen might create, depending on its settings, a \LaTeX\ manual, as well.  In
+order to compile it, Doxygen provides a makefile by default.
 
 ### Pandoc
 

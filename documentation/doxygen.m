@@ -47,6 +47,10 @@
 %%%%
 
 % Software.
+software.check.self     = ' test ';
+software.check.flags    = ' -e ';
+software.check.call     = [software.check.self software.check.flags];
+
 software.compiler.self  = ' doxygen ';
 
 software.make.self      = ' make ';
@@ -56,14 +60,16 @@ software.make.call      = [software.make.self software.make.flags];
 
 
 % Directories.
-directories.make.doxygen    = '';
+directories.doxygen.make    = '';
 
 
 
 % Files.
-files.refman    = '';
-files.self      = ' doxygen.m ';
-files.source    = '';
+files.refman.pdf    = [directories.doxygen.make 'refman.pdf'];
+files.refman.tex    = [directories.doxygen.make 'refman.tex'];
+files.self          = ' doxygen.m ';
+files.source        = '';
+files.target        = '';
 
 
 
@@ -73,8 +79,10 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
+software.check.call.pdf = [software.check.call files.refman.pdf];
+software.check.call.tex = [software.check.call files.refman.tex];
 software.compiler.call  = [software.compiler.self files.source];
-software.make.call      = [software.make.call directories.make.doxygen];
+software.make.call      = [software.make.call directories.doxygen.make];
 
 
 
@@ -100,11 +108,15 @@ disp ([banner 'Done.']);
 
 
 % Compile LaTeX manual, if possible.
-if ~ software.compiler.result && isunix;
+if ~ software.compiler.result && ~ system (software.check.call.tex) && isunix;
     disp ([banner 'Compile LaTeX manual ...']);
 
     disp (software.make.call);
     unix (software.make.call);
+
+    if ~ system (software.check.call.pdf);
+        movefile (files.refman.pdf, files.target, 'f');
+    end;
 
     disp ([banner 'Done.']);
 end;
