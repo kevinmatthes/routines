@@ -68,7 +68,7 @@ contained C-style code.
 
 For more details regarding Doxygen, please consult the official manual.
 
-### Make
+### `make`
 
 Doxygen might create, depending on its settings, a \LaTeX\ manual, as well.  In
 order to compile it, Doxygen provides a makefile therefore.
