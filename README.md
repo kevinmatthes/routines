@@ -67,6 +67,10 @@ version is as follows:
 > with this program; if not, write to the Free Software Foundation, Inc.,
 > 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
+When compiling a printable version of this documentation using Pandoc, the full
+license will be attached automatically to the resulting document.  This can be
+invoked by calling `repository-manual.m`.
+
 ## Description
 
 ### Introduction
