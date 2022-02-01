@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      doxygen-compile.m
+%%      doxygen-latex.m
 %%
 %%  BRIEF
-%%      Create a documentation from sources using `doxygen`.
+%%      Create a LaTeX documentation from sources using `doxygen`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -49,10 +49,19 @@
 % Software.
 software.compiler.self  = ' doxygen ';
 
+software.make.self      = ' make ';
+software.make.flags     = ' -C ';
+software.make.call      = [software.make.self software.make.flags];
+
+
+
+% Directories.
+directories.make.doxygen    = '';
+
 
 
 % Files.
-files.self      = ' doxygen-compile.m ';
+files.self      = ' doxygen-latex.m ';
 files.source    = '';
 
 
@@ -63,7 +72,8 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.compiler.call  = [software.compiler.call files.source];
+software.compiler.call  = [software.compiler.self files.source];
+software.make.call      = [software.make.call directories.make.doxygen];
 
 
 
@@ -81,10 +91,22 @@ disp ([banner 'Begin build instruction.']);
 % Call Doxygen.
 disp ([banner 'Compile Doxygen documentation ...']);
 
-disp (software.compiler.call);
+[software.compiler.result ~] = disp (software.compiler.call);
 system (software.compiler.call);
 
 disp ([banner 'Done.']);
+
+
+
+% Compile LaTeX manual, if possible.
+if ~ software.compiler.result && isunix;
+    disp ([banner 'Compile LaTeX manual ...']);
+
+    disp (software.make.call);
+    unix (software.make.call);
+
+    disp ([banner 'Done.']);
+end;
 
 
 
