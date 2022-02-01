@@ -61,6 +61,7 @@ directories.make.doxygen    = '';
 
 
 % Files.
+files.refman    = '';
 files.self      = ' doxygen.m ';
 files.source    = '';
 
