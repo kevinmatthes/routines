@@ -63,7 +63,7 @@ banner  = ['[' files.self '] '];
 
 
 % Call adjustment.
-software.compiler.call  = [software.compiler.call files.source];
+software.compiler.call  = [software.compiler.self files.source];
 
 
 
