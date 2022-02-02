@@ -48,7 +48,7 @@
 
 % Software.
 software.compiler.self  = ' g++ ';
-software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic -c ';
+software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic -std=c++11 -c ';
 software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
