@@ -41,7 +41,7 @@
 
 # `./clean/`
 
-## Description
+## Summary
 
 This directory provides different default build instructions in order to remove
 build artifacts.
