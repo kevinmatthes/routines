@@ -46,27 +46,29 @@
 %%
 %%%%
 
-% Software.
-software.check.self     = ' test ';
-software.check.flags    = ' -d ';
-software.check.call     = [software.check.self software.check.flags];
+% Doxygen settings.
+doxygen.outdir  = '';
+
+doxygen.html.search = [doxygen.outdir 'html/search/'];
+doyxgen.html.self   = [doxygen.outdir 'html/'];
+doxygen.latex.self  = [doxygen.outdir 'latex/'];
 
 
 
 % Directories.
-directories.delete.dir1 = '';
-directories.delete.dir2 = '';
-directories.delete.dir3 = '';
+directories.delete.dir1 = 'dir1/';
+directories.delete.dir2 = 'dir2/';
+directories.delete.dir3 = 'dir3/';
 
 
 
 % Files.
-files.self              = ' clean-documentation.m ';
+files.self  = 'clean-documentation.m';
 
 
 
 % Control flow.
-banner  = ['[' files.self '] '];
+banner  = ['[ ' files.self ' ] '];
 
 
 
@@ -81,28 +83,59 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Check for and remove documentation.
-fprintf ([banner 'Check for and remove documentation directories... ']);
+% Remove common Doxygen directories.
+fprintf ([banner 'Check for and remove common Doxygen directories ...']);
 
-if ~ system ([software.check.call directories.delete.dir1]);
-    if length (glob ([directories.delete.dir1 '/*']));
-        delete ([directories.delete.dir1 '/*']);
+if length (glob (doxygen.html.search));
+    if length (glob ([doxygen.html.search '*']));
+        delete ([doxygen.html.search '*']);
+    end;
+
+    rmdir (doxygen.html.search);
+end;
+
+if length (glob (doxygen.html.self));
+    if length (glob ([doxygen.html.self '*']));
+        delete ([doxygen.html.self '*']);
+    end;
+
+    rmdir (doxygen.html.self);
+end;
+
+if length (glob (doxygen.latex.self));
+    if length (glob ([doxygen.latex.self '*']));
+        delete ([doxygen.latex.self '*']);
+    end;
+
+    rmdir (doxygen.latex.self);
+end;
+
+disp ('Done.');
+
+
+
+% Check for and remove documentation.
+fprintf ([banner 'Check for and remove documentation directories ... ']);
+
+if length (glob (directories.delete.dir1));
+    if length (glob ([directories.delete.dir1 '*']));
+        delete ([directories.delete.dir1 '*']);
     end;
 
     rmdir (directories.delete.dir1);
 end;
 
-if ~ system ([software.check.call directories.delete.dir2]);
-    if length (glob ([directories.delete.dir2 '/*']));
-        delete ([directories.delete.dir2 '/*']);
+if length (glob (directories.delete.dir2));
+    if length (glob ([directories.delete.dir2 '*']));
+        delete ([directories.delete.dir2 '*']);
     end;
 
     rmdir (directories.delete.dir2);
 end;
 
-if ~ system ([software.check.call directories.delete.dir3]);
-    if length (glob ([directories.delete.dir3 '/*']));
-        delete ([directories.delete.dir3 '/*']);
+if length (glob (directories.delete.dir3));
+    if length (glob ([directories.delete.dir3 '*']));
+        delete ([directories.delete.dir3 '*']);
     end;
 
     rmdir (directories.delete.dir3);

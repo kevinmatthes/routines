@@ -137,4 +137,14 @@ whose variables need to be adjusted before an initial invocation in the binding
 repository.  This requires the users only to know about variable definitions as
 well as string concatenation in Octave.
 
+## Software Requirements
+
+The minimal software requirements for this repository are listed in the
+following.
+
+| Requirement   | Type          | Role                              |
+|:--------------|:-------------:|:----------------------------------|
+| GNU Octave    | application   | execution of the provided scripts |
+| Pandoc        | application   | compilation of repository manual  |
+
 <!----------------------------------------------------------------------------->
