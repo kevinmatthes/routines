@@ -142,9 +142,10 @@ well as string concatenation in Octave.
 The minimal software requirements for this repository are listed in the
 following.
 
-| Requirement   | Type          | Role                              |
-|:--------------|:-------------:|:----------------------------------|
-| GNU Octave    | application   | execution of the provided scripts |
-| Pandoc        | application   | compilation of repository manual  |
+| Requirement       | Type          | Role                              |
+|:------------------|:-------------:|:----------------------------------|
+| GNU Octave        | application   | execution of the provided scripts |
+| Pandoc            | application   | compilation of repository manual  |
+| `texlive-full`    | package       | compilation of repository manual  |
 
 <!----------------------------------------------------------------------------->
