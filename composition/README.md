@@ -45,7 +45,7 @@
 
 This directory provides different common compositions of build instructions.
 
-## Supported actions
+## Supported Actions
 
 Just by utilising the GNU Octave core functionalities, these build instructions
 can ...
