@@ -46,25 +46,18 @@
 %%
 %%%%
 
-% Software.
-software.check.self     = ' test ';
-software.check.flags    = ' -e ';
-software.check.call     = [software.check.self software.check.flags];
-
-
-
 % Files.
 files.delete.file1  = '';
 % files.delete.file2  = '';
 % files.delete.file3  = '';
 % ...
 
-files.self          = ' clean-other.m ';
+files.self  = 'clean-other.m';
 
 
 
 % Control flow.
-banner  = ['[' files.self '] '];
+banner  = ['[ ' files.self ' ] '];
 
 
 
@@ -82,14 +75,9 @@ disp ([banner 'Begin build instruction.']);
 % Check for and remove the specified files.
 fprintf ([banner 'Check for and remove specified files ... ']);
 
-[check.file1    ~]  = system ([software.check.call files.delete.file1]);
-% [check.file2    ~]  = system ([software.check.call files.delete.file2]);
-% [check.file3    ~]  = system ([software.check.call files.delete.file3]);
-% ...
-
-if ~ check.file1;   delete (files.delete.file1);    end;
-% if ~ check.file2;   delete (files.delete.file2);    end;
-% if ~ check.file3;   delete (files.delete.file3);    end;
+if length (glob (files.delete.file1));  delete (files.delete.file1);    end;
+% if length (glob (files.delete.file2));  delete (files.delete.file2);    end;
+% if length (glob (files.delete.file3));  delete (files.delete.file3);    end;
 % ...
 
 disp ('Done.');
