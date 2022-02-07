@@ -59,7 +59,6 @@ requires the user to have the following applications installed.
 * `doxygen`
 * `make`
 * `pandoc`
-* `test`
 
 ### Doxygen
 
@@ -80,13 +79,6 @@ This feature is frequently required for the creation of repository manuals from
 the contained default files, such as the READMEs and the respective LICENSE.
 
 For more details regarding Pandoc, please consult the official manual.
-
-### `test`
-
-`test` is a UNIX essential which unfortunately is not available on Windows, by
-default.  In order to solve this problem, there are some portations of this
-command to Windows, for instance https://github.com/Ranplax/testOnWindows which
-is written in Rust.
 
 ## Supported Actions
 
