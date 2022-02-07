@@ -55,9 +55,8 @@ software.check.call     = [software.check.self software.check.flags];
 
 % Directories.
 directories.delete.dir1 = '';
-% directories.delete.dir2 = '';
-% directories.delete.dir3 = '';
-% ...
+directories.delete.dir2 = '';
+directories.delete.dir3 = '';
 
 
 
@@ -85,27 +84,29 @@ disp ([banner 'Begin build instruction.']);
 % Check for and remove documentation.
 fprintf ([banner 'Check for and remove documentation directories... ']);
 
-[check.dir1 ~]  = system (software.check.call directories.delete.dir1);
-% [check.dir2 ~]  = system (software.check.call directories.delete.dir2);
-% [check.dir3 ~]  = system (software.check.call directories.delete.dir3);
-% ...
+if ~ system ([software.check.call directories.delete.dir1]);
+    if length (glob ([directories.delete.dir1 '/*']));
+        delete ([directories.delete.dir1 '/*']);
+    end;
 
-if ~ check.dir1;
-    delete ([directories.delete.dir1 '/*']);
     rmdir (directories.delete.dir1);
 end;
 
-% if ~ check.dir2;
-%     delete ([directories.delete.dir2 '/*']);
-%     rmdir (directories.delete.dir2);
-% end;
+if ~ system ([software.check.call directories.delete.dir2]);
+    if length (glob ([directories.delete.dir2 '/*']));
+        delete ([directories.delete.dir2 '/*']);
+    end;
 
-% if ~ check.dir3;
-%     delete ([directories.delete.dir3 '/*']);
-%     rmdir (directories.delete.dir3);
-% end;
+    rmdir (directories.delete.dir2);
+end;
 
-% ...
+if ~ system ([software.check.call directories.delete.dir3]);
+    if length (glob ([directories.delete.dir3 '/*']));
+        delete ([directories.delete.dir3 '/*']);
+    end;
+
+    rmdir (directories.delete.dir3);
+end;
 
 disp ('Done.');
 
