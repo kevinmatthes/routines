@@ -69,4 +69,9 @@ is written in Rust.
 * clean object files
 * clean specific files
 
+### Clean Whole Documentation
+
+This build routine, provided by `clean-documentation.m`, will clean the output
+directories of automatic documentation systems, such as Doxygen.
+
 <!----------------------------------------------------------------------------->
