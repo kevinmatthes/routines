@@ -55,13 +55,6 @@ doxygen.latex.self  = [doxygen.outdir 'latex/'];
 
 
 
-% Directories.
-directories.delete.dir1 = 'dir1/';
-directories.delete.dir2 = 'dir2/';
-directories.delete.dir3 = 'dir3/';
-
-
-
 % Files.
 files.self  = 'clean-documentation.m';
 
@@ -84,7 +77,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Remove common Doxygen directories.
-fprintf ([banner 'Check for and remove common Doxygen directories ...']);
+fprintf ([banner 'Check for and remove Doxygen directories ...']);
 
 if length (glob (doxygen.html.search));
     if length (glob ([doxygen.html.search '*']));
@@ -108,37 +101,6 @@ if length (glob (doxygen.latex.self));
     end;
 
     rmdir (doxygen.latex.self);
-end;
-
-disp ('Done.');
-
-
-
-% Check for and remove documentation.
-fprintf ([banner 'Check for and remove documentation directories ... ']);
-
-if length (glob (directories.delete.dir1));
-    if length (glob ([directories.delete.dir1 '*']));
-        delete ([directories.delete.dir1 '*']);
-    end;
-
-    rmdir (directories.delete.dir1);
-end;
-
-if length (glob (directories.delete.dir2));
-    if length (glob ([directories.delete.dir2 '*']));
-        delete ([directories.delete.dir2 '*']);
-    end;
-
-    rmdir (directories.delete.dir2);
-end;
-
-if length (glob (directories.delete.dir3));
-    if length (glob ([directories.delete.dir3 '*']));
-        delete ([directories.delete.dir3 '*']);
-    end;
-
-    rmdir (directories.delete.dir3);
 end;
 
 disp ('Done.');
