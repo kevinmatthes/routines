@@ -41,10 +41,15 @@
 
 # `./composition/`
 
-## Description
+## Summary
 
 This directory provides different common compositions of build instructions.
 
-At the moment, there is no such routine, yet.
+## Supported actions
+
+Just by utilising the GNU Octave core functionalities, these build instructions
+can ...
+
+* compile a library by invoking a set of further build instructions.
 
 <!----------------------------------------------------------------------------->
