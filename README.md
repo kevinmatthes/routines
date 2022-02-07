@@ -148,4 +148,9 @@ following.
 | Pandoc            | application   | compilation of repository manual  |
 | `texlive-full`    | package       | compilation of repository manual  |
 
+All further software requirements are named in the according directories of the
+various build routines.  Mostly, these further software requirements just are
+compilers, specific library creation tools or automatic documentation writing
+applications.
+
 <!----------------------------------------------------------------------------->
