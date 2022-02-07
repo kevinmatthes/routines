@@ -47,26 +47,26 @@
 %%%%
 
 % Software.
-software.octave = ' octave ';
+octave.self = 'octave';
 
 
 
 % Directories.
-directories.lib     = './lib/';
+directories.lib = './lib/';
 
 
 
 % Files.
-files.mklib = ' ar-create.m ';
-files.mkobj = ' gfortran-95-objects.m ';
-files.rmlib = ' clean-libraries.m ';
-files.rmobj = ' clean-objects.m ';
-files.self  = ' compile-library.m ';
+files.mklib = '';
+files.mkobj = '';
+files.rmlib = '';
+files.rmobj = '';
+files.self  = 'compile-library.m';
 
 
 
 % Control flow.
-banner  = ['[' files.self '] '];
+banner  = ['[ ' files.self ' ] '];
 
 
 
@@ -89,10 +89,10 @@ disp ('Done.');
 
 
 % Process build instructions.
-system ([software.octave files.rmlib]);
-system ([software.octave files.mkobj]);
-system ([software.octave files.mklib]);
-system ([software.octave files.rmobj]);
+system ([software.octave ' ' files.rmlib]);
+system ([software.octave ' ' files.mkobj]);
+system ([software.octave ' ' files.mklib]);
+system ([software.octave ' ' files.rmobj]);
 
 
 
