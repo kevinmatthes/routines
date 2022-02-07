@@ -47,17 +47,17 @@
 %%%%
 
 % Files.
-files.self              = ' clean-libraries.m ';
+files.self  = 'clean-libraries.m';
 
-files.types.objects.a   = '*.a';
-files.types.objects.dll = '*.dll';
-files.types.objects.lib = '*.lib';
-files.types.objects.so  = '*.so';
+files.types.a   = '*.a';
+files.types.dll = '*.dll';
+files.types.lib = '*.lib';
+files.types.so  = '*.so';
 
 
 
 % Control flow.
-banner  = ['[' files.self '] '];
+banner  = ['[ ' files.self ' ] '];
 
 
 
@@ -75,10 +75,10 @@ disp ([banner 'Begin build instruction.']);
 % Check for and remove libraries.
 fprintf ([banner 'Check for libraries ... ']);
 
-count.a     = length (glob (files.types.objects.a));
-count.dll   = length (glob (files.types.objects.dll));
-count.lib   = length (glob (files.types.objects.lib));
-count.so    = length (glob (files.types.objects.so));
+count.a     = length (glob (files.types.a));
+count.dll   = length (glob (files.types.dll));
+count.lib   = length (glob (files.types.lib));
+count.so    = length (glob (files.types.so));
 
 count.sum   = count.a + count.dll + count.lib + count.so;
 
@@ -86,10 +86,10 @@ if count.sum;
     fprintf ('%d found.\n', count.sum);
     fprintf ([banner 'Remove those ... ']);
 
-    if count.a;     delete (files.types.objects.a);     end;
-    if count.dll;   delete (files.types.objects.dll);   end;
-    if count.lib;   delete (files.types.objects.lib);   end;
-    if count.so;    delete (files.types.objects.so);    end;
+    if count.a;     delete (files.types.a);     end;
+    if count.dll;   delete (files.types.dll);   end;
+    if count.lib;   delete (files.types.lib);   end;
+    if count.so;    delete (files.types.so);    end;
 
     disp ('Done.');
 else;

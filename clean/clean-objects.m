@@ -49,8 +49,8 @@
 % Files.
 files.self              = ' clean-objects.m ';
 
-files.types.objects.o   = '*.o';
-files.types.objects.obj = '*.obj';
+files.types.o   = '*.o';
+files.types.obj = '*.obj';
 
 
 
@@ -73,8 +73,8 @@ disp ([banner 'Begin build instruction.']);
 % Check for and remove object files.
 fprintf ([banner 'Check for object files ... ']);
 
-count.o     = length (glob (files.types.objects.o));
-count.obj   = length (glob (files.types.objects.obj));
+count.o     = length (glob (files.types.o));
+count.obj   = length (glob (files.types.obj));
 
 count.sum   = count.o + count.obj;
 
@@ -82,8 +82,8 @@ if count.sum;
     fprintf ('%d found.\n', count.sum);
     fprintf ([banner 'Remove those ... ']);
 
-    if count.o;     delete (files.types.objects.o);     end;
-    if count.obj;   delete (files.types.objects.obj);   end;
+    if count.o;     delete (files.types.o);     end;
+    if count.obj;   delete (files.types.obj);   end;
 
     disp ('Done.');
 else;

@@ -47,14 +47,14 @@
 %%%%
 
 % Files.
-files.self              = ' clean-manuals.m ';
+files.self  = 'clean-manuals.m';
 
-files.types.objects.pdf = '*.pdf';
+files.types.pdf = '*.pdf';
 
 
 
 % Control flow.
-banner  = ['[' files.self '] '];
+banner  = ['[ ' files.self ' ] '];
 
 
 
@@ -72,13 +72,13 @@ disp ([banner 'Begin build instruction.']);
 % Check for and remove manuals.
 fprintf ([banner 'Check for manuals ... ']);
 
-count.pdf   = length (glob (files.types.objects.pdf));
+count.pdf   = length (glob (files.types.pdf));
 
 if count.pdf;
     fprintf ('%d found.\n', count.pdf);
     fprintf ([banner 'Remove those ... ']);
 
-    if count.pdf;   delete (files.types.objects.pdf);   end;
+    if count.pdf;   delete (files.types.pdf);   end;
 
     disp ('Done.');
 else;
