@@ -53,32 +53,18 @@ called by the scripts will be explained in detail in the following sections.
 
 ## Software Requirements
 
-Despite GNU Octave in order to execute the build scripts, this directory
-requires the user to have the following applications installed.
-
-* Doxygen
-* `make`
-* Pandoc
-
-### Doxygen
-
-Doxygen will be utilised in order to create a source code documentation for the
-contained C-style code.
-
-For more details regarding Doxygen, please consult the official manual.
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| Doxygen           | application   | creation of source code documentation |
+| GNU Octave        | application   | execution of the provided scripts     |
+| `make`            | application   | finalisation of Doxygen documentation |
+| Pandoc            | application   | compilation of repository manual      |
+| `texlive-full`    | package       | compilation of repository manual      |
 
 ### `make`
 
 Doxygen might create, depending on its settings, a \LaTeX\ manual, as well.  In
 order to compile it, Doxygen provides a makefile therefore.
-
-### Pandoc
-
-Pandoc is required in order to compile a \LaTeX\ manual from Markdown sources.
-This feature is frequently required for the creation of repository manuals from
-the contained default files, such as the READMEs and the respective LICENSE.
-
-For more details regarding Pandoc, please consult the official manual.
 
 ## Supported Actions
 
