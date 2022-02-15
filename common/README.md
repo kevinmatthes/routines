@@ -47,6 +47,16 @@ This directory provides various frequently used build instructions in order to
 abbreviate the process of customisation for a certain repository since they
 contain sane preconfigurations.
 
-At the moment, there is no such routine, yet.
+## Software Requirements
+
+| Requirement       | Type          | Role                              |
+|:------------------|:-------------:|:----------------------------------|
+| GNU Octave        | application   | execution of the provided scripts |
+| Pandoc            | application   | compilation of repository manual  |
+| `texlive-full`    | package       | compilation of repository manual  |
+
+## Supported Actions
+
+* writing a repository manual with Pandoc
 
 <!----------------------------------------------------------------------------->
