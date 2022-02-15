@@ -39,12 +39,13 @@
 --
 ------------------------------------------------------------------------------->
 
-# `./installation/`
+# `./common/`
 
-## Description
+## Summary
 
-This directory provides different default build instructions in order to install
-software or libraries, for instance.
+This directory provides various frequently used build instructions in order to
+abbreviate the process of customisation for a certain repository since they
+contain sane preconfigurations.
 
 At the moment, there is no such routine, yet.
 
