@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      gfortran-95-objects.m
+%%      gfortran-95-application.m
 %%
 %%  BRIEF
-%%      Create object files from Fortran source code using `gfortran`.
+%%      Create a target application from sources using `gfortran`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -48,14 +48,16 @@
 
 % Software.
 software.compiler.self  = ' gfortran ';
-software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic -std=f95 -c ';
+software.compiler.link  = '';
+software.compiler.flags = ' -Wall -Werror -Wextra -Wpedantic -std=f95 ';
 software.compiler.call  = [software.compiler.self software.compiler.flags];
 
 
 
 % Files.
-files.self      = ' gfortran-95-objects.m ';
+files.self      = ' gfortran-95-application.m ';
 files.source    = ' *.f95 ';
+files.target    = '';
 
 
 
@@ -66,6 +68,8 @@ banner  = ['[' files.self '] '];
 
 % Call adjustment.
 software.compiler.call  = [software.compiler.call files.source];
+software.compiler.call  = [software.compiler.call software.compiler.link];
+software.compiler.call  = [software.compiler.call ' -o ' files.target];
 
 
 
@@ -80,8 +84,8 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call Fortran compiler.
-disp ([banner 'Compile object files ...']);
+% Call C compiler.
+disp ([banner 'Compile application ' files.target ' ...']);
 
 disp (software.compiler.call);
 system (software.compiler.call);
