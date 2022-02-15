@@ -46,6 +46,12 @@
 This directory provides different default build instructions in order to remove
 build artifacts.
 
+## Software Requirements
+
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| GNU Octave        | application   | execution of the provided scripts     |
+
 ## Supported Actions
 
 Just by utilising the GNU Octave core functionalities, these build instructions
