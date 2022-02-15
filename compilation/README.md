@@ -53,17 +53,22 @@ functionalities are used will be explained in detail in the following sections.
 
 ## Software Requirements
 
-Despite GNU Octave in order to execute the build scripts, this directory
-requires the user to have the following applications installed.
-
-* `g++`
-* `gcc`
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| `g++`             | application   | C++ compiler                          |
+| `gcc`             | application   | C compiler                            |
+| `gfortran`        | application   | Fortran compiler                      |
+| GNU Octave        | application   | execution of the provided scripts     |
 
 ## Supported Actions
 
-| Action                            | `g++` | `gcc` |
-|:----------------------------------|:-----:|:-----:|
-| object file compilation           | yes   | yes   |
-| target application compilation    | yes   | yes   |
+* compilation of objects using
+  * `g++`
+  * `gcc`
+  * `gfortran`
+* compilation of a target application using
+  * `g++`
+  * `gcc`
+  * `gfortran`
 
 <!----------------------------------------------------------------------------->
