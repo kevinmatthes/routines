@@ -97,7 +97,7 @@ disp ([banner 'Begin build instruction.']);
 disp ([banner 'Compile Doxygen documentation ...']);
 
 disp (software.compiler.call);
-[software.compiler.result ~] = system (software.compiler.call);
+software.compiler.result = system (software.compiler.call);
 
 disp ([banner 'Done.']);
 

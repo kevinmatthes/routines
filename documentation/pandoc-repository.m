@@ -22,7 +22,7 @@
 %%      pandoc-repository.m
 %%
 %%  BRIEF
-%%      Create a LaTeX documentation for this repository using `pandoc`.
+%%      Create a LaTeX documentation for this repository using Pandoc.
 %%
 %%  AUTHOR
 %%      Kevin Matthes

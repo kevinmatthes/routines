@@ -68,12 +68,9 @@ order to compile it, Doxygen provides a makefile therefore.
 
 ## Supported Actions
 
-| Action                | Doxygen   | Pandoc    |
-|:----------------------|:---------:|:---------:|
-| HTML creation         | yes       | no        |
-| \LaTeX\ creation      | yes       | yes       |
-| \LaTeX\ compilation   | yes       | yes       |
-| repository manual     | no        | yes       |
+* compilation of a \LaTeX\ document with Pandoc
+* compilation of a repository manual with Pandoc
+* compilation of a source code documentation with Doxygen
 
 ### Repository Manuals
 

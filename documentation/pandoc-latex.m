@@ -22,7 +22,7 @@
 %%      pandoc-latex.m
 %%
 %%  BRIEF
-%%      Create a LaTeX documentation from sources using `pandoc`.
+%%      Create a LaTeX document from sources using Pandoc.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -83,7 +83,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Call Pandoc.
-disp ([banner 'Compile Pandoc documentation ...']);
+disp ([banner 'Compile Pandoc document ...']);
 
 disp (software.compiler.call);
 system (software.compiler.call);
