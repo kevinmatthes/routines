@@ -41,7 +41,7 @@
 
 # `./installation/`
 
-## Description
+## Summary
 
 This directory provides different default build instructions in order to install
 software or libraries, for instance.
