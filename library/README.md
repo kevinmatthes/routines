@@ -56,15 +56,13 @@ the action on libraries it performs.
 
 ## Software Requirements
 
-Despite GNU Octave in order to execute the build scripts, this directory
-requires the user to have the following applications installed.
-
-* `ar`
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| `ar`              | application   | create and update static libraries    |
+| GNU Octave        | application   | execution of the provided scripts     |
 
 ## Supported Actions
 
-| Action            | `ar`  |
-|:------------------|:-----:|
-| library creation  | yes   |
+* create and update static libraries with `ar`
 
 <!----------------------------------------------------------------------------->
