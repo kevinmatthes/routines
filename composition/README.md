@@ -51,5 +51,6 @@ Just by utilising the GNU Octave core functionalities, these build instructions
 can ...
 
 * compile a library by invoking a set of further build instructions.
+* test a library by invoking a set of further build instructions.
 
 <!----------------------------------------------------------------------------->
