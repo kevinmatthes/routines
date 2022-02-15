@@ -45,6 +45,12 @@
 
 This directory provides different common compositions of build instructions.
 
+## Software Requirements
+
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| GNU Octave        | application   | execution of the provided scripts     |
+
 ## Supported Actions
 
 Just by utilising the GNU Octave core functionalities, these build instructions
