@@ -47,26 +47,26 @@
 %%%%
 
 % Software.
-software.octave = ' octave ';
+software.octave = 'octave';
 
 
 
 % Directories.
-directories.lib     = './lib/';
-directories.test    = './tests/';
+directories.lib     = '';
+directories.test    = '';
 
 
 
 % Files.
-files.librunner     = ' compile-library.m ';
-files.rmlib         = ' clean-libraries.m ';
-files.self          = ' test-library.m ';
-files.testrunner    = ' gfortran-95-tests.m ';
+files.librunner     = '';
+files.rmlib         = '';
+files.self          = 'test-library.m';
+files.testrunner    = '';
 
 
 
 % Control flow.
-banner  = ['[' files.self '] '];
+banner  = ['[ ' files.self ' ] '];
 
 
 
@@ -82,20 +82,20 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Compile library.
-system ([software.octave files.librunner]);
+system ([software.octave ' ' files.librunner]);
 
 
 
 % Run test suites.
 directories.current = cd (directories.test);
-system ([software.octave files.testrunner]);
+system ([software.octave ' ' files.testrunner]);
 cd (directories.current);
 
 
 
 % Clean up libraries.
 cd (directories.lib);
-system ([software.octave files.rmlib]);
+system ([software.octave ' ' files.rmlib]);
 
 
 
