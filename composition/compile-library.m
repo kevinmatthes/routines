@@ -89,10 +89,10 @@ disp ('Done.');
 
 
 % Process build instructions.
-system ([software.octave ' ' files.rmlib]);
-system ([software.octave ' ' files.mkobj]);
-system ([software.octave ' ' files.mklib]);
-system ([software.octave ' ' files.rmobj]);
+system ([octave.self ' ' files.rmlib]);
+system ([octave.self ' ' files.mkobj]);
+system ([octave.self ' ' files.mklib]);
+system ([octave.self ' ' files.rmobj]);
 
 
 
