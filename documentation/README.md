@@ -56,9 +56,9 @@ called by the scripts will be explained in detail in the following sections.
 Despite GNU Octave in order to execute the build scripts, this directory
 requires the user to have the following applications installed.
 
-* `doxygen`
+* Doxygen
 * `make`
-* `pandoc`
+* Pandoc
 
 ### Doxygen
 
@@ -82,7 +82,7 @@ For more details regarding Pandoc, please consult the official manual.
 
 ## Supported Actions
 
-| Action                | `doxygen` | `pandoc`  |
+| Action                | Doxygen   | Pandoc    |
 |:----------------------|:---------:|:---------:|
 | HTML creation         | yes       | no        |
 | \LaTeX\ creation      | yes       | yes       |
