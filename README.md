@@ -100,8 +100,8 @@ such as copying, renaming and removing a file from the file system, are already
 handled by Octave itself since it provides dedicated functions therefore.
 
 All scripts are created for and tested with Octave.  Although they might work
-with MATLAB, as well, a real support is for MATLAB compatibility is not provied,
-at the moment.
+with MATLAB, as well, a real support is for MATLAB compatibility is not
+provided, at the moment.
 
 ### How to Apply the Build Scripts
 
