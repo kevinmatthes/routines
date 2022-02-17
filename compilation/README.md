@@ -62,15 +62,14 @@ functionalities are used will be explained in detail in the following sections.
 
 ## Supported Actions
 
-* compilation of objects using
-  * `g++`
-  * `gcc`
-  * `gfortran`
-* compilation of a target application using
-  * `g++`
-  * `gcc`
-  * `gfortran`
-* compilation and call of test suites
-  * `gfortran`
+| Script                      | Action                              |
+|:----------------------------|:------------------------------------|
+| `g++-application.m`         | compilation of a target application |
+| `g++-objects.m`             | compilation of object files         |
+| `gcc-application.m`         | compilation of a target application |
+| `gcc-objects.m`             | compilation of object files         |
+| `gfortran-95-application.m` | compilation of a target application |
+| `gfortran-95-objects.m`     | compilation of object files         |
+| `gfortran-95-tests.m`       | compilation and call of test suites |
 
 <!----------------------------------------------------------------------------->
