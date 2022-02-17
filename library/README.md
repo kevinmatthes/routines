@@ -63,6 +63,8 @@ the action on libraries it performs.
 
 ## Supported Actions
 
-* create and update static libraries with `ar`
+| Script        | Action                                        |
+|:--------------|:----------------------------------------------|
+| `ar-create.m` | create and update static libraries with `ar`  |
 
 <!----------------------------------------------------------------------------->
