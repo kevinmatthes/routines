@@ -51,12 +51,15 @@ contain sane preconfigurations.
 
 | Requirement       | Type          | Role                              |
 |:------------------|:-------------:|:----------------------------------|
+| `docs-snippets`   | repository    | documentation constants           |
 | GNU Octave        | application   | execution of the provided scripts |
 | Pandoc            | application   | compilation of repository manual  |
 | `texlive-full`    | package       | compilation of repository manual  |
 
 ## Supported Actions
 
-* writing a repository manual with Pandoc
+| Script                | Action                                            |
+|:----------------------|:--------------------------------------------------|
+| `repository-manual.m` | compilation of a repository manual with Pandoc    |
 
 <!----------------------------------------------------------------------------->
