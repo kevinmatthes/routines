@@ -41,9 +41,12 @@
 
 # `./composition/`
 
-## Summary
+## Description
 
 This directory provides different common compositions of build instructions.
+
+All of these have in common that they will invoke further scripts which might be
+nested arbitrarily within the repository structure.
 
 ## Software Requirements
 
