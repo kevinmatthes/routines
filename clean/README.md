@@ -54,21 +54,12 @@ build artifacts.
 
 ## Supported Actions
 
-Just by utilising the GNU Octave core functionalities, these build instructions
-can
-
-* clean whole documentations by removing the documentation directories and their
-  build artifacts.
-* clean libraries.
-* clean manuals (static documents).
-* clean object files.
-* clean specific files.
-
-### Clean Whole Documentation
-
-This build routine, provided by `clean-documentation.m`, will clean the output
-directories of automatic documentation systems, such as Doxygen.
-
-Additional documentation systems and directories can be added upon request.
+| Script                    | Action                              |
+|:--------------------------|:------------------------------------|
+| `clean-documentation.m`   | remove whole Doxygen documentations |
+| `clean-libraries.m`       | remove libraries                    |
+| `clean-manuals.m`         | remove manuals (static documents)   |
+| `clean-objects.m`         | remove object files                 |
+| `clean-other.m`           | remove specific build artifacts     |
 
 <!----------------------------------------------------------------------------->
