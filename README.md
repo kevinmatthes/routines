@@ -73,8 +73,6 @@ invoked by calling `repository-manual.m`.
 
 ## Description
 
-### Introduction
-
 Many projects require similiar build instructions which only differ regarding
 certain parameters specific to their repository, such as the name of the
 compilation target.  Writing them from scratch over and over again for each new
@@ -103,20 +101,16 @@ All scripts are created for and tested with Octave.  Although they might work
 with MATLAB, as well, a real support is for MATLAB compatibility is not
 provided, at the moment.
 
-### How to Apply the Build Scripts
-
 Each build script contains the instructions in order to perform exactly one
 common task of a build routine.  These tasks are, for instance, compiling an
 application, creating a library, writing the documentation and cleaning up at
 the end.
 
 In order to call a build instruction, it must be given as command line parameter
-to GNU Octave, for instance:
+to GNU Octave:
 
 ```
 octave clean-objects.m
-# or
-octave-cli clean-objects.m
 ```
 
 Just as with the standard-`make`, the scripts can be nested regarding their call
@@ -144,6 +138,7 @@ following.
 
 | Requirement       | Type          | Role                              |
 |:------------------|:-------------:|:----------------------------------|
+| `docs-snippets`   | repository    | documentation constants           |
 | GNU Octave        | application   | execution of the provided scripts |
 | Pandoc            | application   | compilation of repository manual  |
 | `texlive-full`    | package       | compilation of repository manual  |
