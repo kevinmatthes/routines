@@ -119,7 +119,7 @@ with MATLAB, as well, a real support is for MATLAB compatibility is not
 provided, at the moment.  Each build script contains the instructions in order
 to perform exactly one common task of a build routine.  These tasks are, for
 instance, compiling an application, creating a library, writing the
-documentation and cleaning up at the end.  In order to call a build instruction,
+documentation or cleaning up at the end.  In order to call a build instruction,
 it must be given as command line parameter to GNU Octave:
 
 ```
