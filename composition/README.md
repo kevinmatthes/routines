@@ -53,10 +53,9 @@ This directory provides different common compositions of build instructions.
 
 ## Supported Actions
 
-Just by utilising the GNU Octave core functionalities, these build instructions
-can ...
-
-* compile a library by invoking a set of further build instructions.
-* test a library by invoking a set of further build instructions.
+| Script                | Action            |
+|:----------------------|:------------------|
+| `compile-library.m`   | compile a library |
+| `test-library.m`      | test a library    |
 
 <!----------------------------------------------------------------------------->
