@@ -55,33 +55,19 @@ called by the scripts will be explained in detail in the following sections.
 
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
+| `docs-snippets`   | repository    | documentation constants               |
 | Doxygen           | application   | creation of source code documentation |
 | GNU Octave        | application   | execution of the provided scripts     |
 | `make`            | application   | finalisation of Doxygen documentation |
 | Pandoc            | application   | compilation of repository manual      |
 | `texlive-full`    | package       | compilation of repository manual      |
 
-### `make`
-
-Doxygen might create, depending on its settings, a \LaTeX\ manual, as well.  In
-order to compile it, Doxygen provides a makefile therefore.
-
 ## Supported Actions
 
-* compilation of a \LaTeX\ document with Pandoc
-* compilation of a repository manual with Pandoc
-* compilation of a source code documentation with Doxygen
-
-### Repository Manuals
-
-The build instruction provided by `pandoc-repository.m` requires not only Pandoc
-for the final compilation but relies furthermore on `docs-snippets` which is
-bound by this repository, as well.
-
-`docs-snippets`, see https://github.com/kevinmatthes/docs-snippets, stores
-default configuration instructions for documentations, such as common Pandoc
-meta data.  Since it is not a software but a collection of static files, it is
-not named in the "Software Requirements" section.  Due to all paths being
-adjustable as desired, substituting this submodule is no problem.
+| Script                | Action                                            |
+|:----------------------|:--------------------------------------------------|
+| `doxygen.m`           | source code documentation with Doxygen            |
+| `pandoc-latex.m`      | compilation of a \LaTeX\ document with Pandoc     |
+| `pandoc-repository.m` | compilation of a repository manual with Pandoc    |
 
 <!----------------------------------------------------------------------------->
