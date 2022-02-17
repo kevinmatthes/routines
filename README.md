@@ -71,6 +71,23 @@ When compiling a printable version of this documentation using Pandoc, the full
 license will be attached automatically to the resulting document.  This can be
 invoked by calling `repository-manual.m`.
 
+## Software Requirements
+
+The minimal software requirements for this repository are listed in the
+following.
+
+| Requirement       | Type          | Role                              |
+|:------------------|:-------------:|:----------------------------------|
+| `docs-snippets`   | repository    | documentation constants           |
+| GNU Octave        | application   | execution of the provided scripts |
+| Pandoc            | application   | compilation of repository manual  |
+| `texlive-full`    | package       | compilation of repository manual  |
+
+All further software requirements are named in the according directories of the
+various build routines.  Mostly, these further software requirements just are
+compilers, specific library creation tools or automatic documentation writing
+applications.
+
 ## Description
 
 Many projects require similiar build instructions which only differ regarding
@@ -130,22 +147,5 @@ Each file provided by this repository is a template for the designated task
 whose variables need to be adjusted before an initial invocation in the binding
 repository.  This requires the users only to know about variable definitions as
 well as string concatenation in Octave.
-
-## Software Requirements
-
-The minimal software requirements for this repository are listed in the
-following.
-
-| Requirement       | Type          | Role                              |
-|:------------------|:-------------:|:----------------------------------|
-| `docs-snippets`   | repository    | documentation constants           |
-| GNU Octave        | application   | execution of the provided scripts |
-| Pandoc            | application   | compilation of repository manual  |
-| `texlive-full`    | package       | compilation of repository manual  |
-
-All further software requirements are named in the according directories of the
-various build routines.  Mostly, these further software requirements just are
-compilers, specific library creation tools or automatic documentation writing
-applications.
 
 <!----------------------------------------------------------------------------->
