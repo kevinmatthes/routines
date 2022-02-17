@@ -123,7 +123,7 @@ documentation or cleaning up at the end.  In order to call a build instruction,
 it must be given as command line parameter to GNU Octave:
 
 ```
-octave clean-objects.m
+octave repository-manual.m
 ```
 
 Just as with the standard-`make`, the scripts can be nested regarding their call
