@@ -70,5 +70,7 @@ functionalities are used will be explained in detail in the following sections.
   * `g++`
   * `gcc`
   * `gfortran`
+* compilation and call of test suites
+  * `gfortran`
 
 <!----------------------------------------------------------------------------->
