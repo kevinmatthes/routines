@@ -83,13 +83,13 @@ disp ([banner 'Begin build instruction.']);
 
 % Set the Git commands.
 name        = 'bone';
-definition  = ['"clone --bare"'];
+definition  = '"clone --bare"';
 disp ([banner '[ ' name ' ] Clone a bare repository.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'checkin';
-definition  = ['"!git add . && git commit"'];
+definition  = '"!git add . && git commit"';
 disp ([banner '[ ' name ' ] Immediately create a new commit.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
@@ -102,13 +102,13 @@ disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'ff';
-definition  = ['"merge --ff"'];
+definition  = '"merge --ff"';
 disp ([banner '[ ' name ' ] Update a branch without a new commit.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'goto';
-definition  = ['"checkout"'];
+definition  = '"checkout"';
 disp ([banner '[ ' name ' ] Switch to a certain branch.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
@@ -120,19 +120,19 @@ disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'noff';
-definition  = ['"merge --no-ff"'];
+definition  = '"merge --no-ff"';
 disp ([banner '[ ' name ' ] Update a branch with a new commit.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'verbose';
-definition  = ['"log --graph --stat --pretty=fuller --decorate --all -p"'];
+definition  = '"log --graph --stat --pretty=fuller --decorate --all -p"';
 disp ([banner '[ ' name ' ] Write the whole history to the terminal.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'view';
-definition  = ['"log --graph --pretty=oneline --decorate --all"'];
+definition  = '"log --graph --pretty=oneline --decorate --all"';
 disp ([banner '[ ' name ' ] Write the a history summary to the terminal.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
