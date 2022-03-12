@@ -173,6 +173,12 @@ disp ([banner '[ ' name ' ] Give information about the current branch.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'withdraw';
+definition  = '"reset HEAD --"';
+disp ([banner '[ ' name ' ] Remove a file from the staging area.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 
 
 % End build instruction.
