@@ -54,7 +54,9 @@ git.config.call     = [git.config.self git.config.mode git.config.target];
 git.self            = ' git ';
 git.call            = [git.self git.config.call];
 
+repotool.args   = ' --all ';
 repotool.self   = ' gitk ';
+rpeotoll.call   = [repotool.self repotool.args];
 
 
 
@@ -99,7 +101,7 @@ disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'graph';
-definition  = ['"' '!' repotool.self ' --all &' '"'];
+definition  = ['"' '!' repotool.call '&' '"'];
 disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
