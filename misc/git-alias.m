@@ -95,7 +95,7 @@ disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'create';
-definition  = ['"!git init && git add . && git commit -m ' "'" ]
+definition  = ['"!git init && git add . && git commit -m ' "'" ];
 definition  = [definition 'This is the initial commit.' "'" '"'];
 disp ([banner '[ ' name ' ] Immediately create a new Git repository.']);
 disp ([git.call name ' ' definition]);
