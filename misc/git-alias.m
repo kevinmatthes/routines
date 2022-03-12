@@ -145,7 +145,7 @@ system ([git.call name ' ' definition]);
 
 name        = 'newbranch';
 definition  = '"checkout -b"';
-disp ([banner '[ ' name ' ] Create and switch to a new branch.']);
+disp ([banner '[ ' name ' ] Create a and switch to the new branch.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -175,7 +175,7 @@ system ([git.call name ' ' definition]);
 
 name        = 'view';
 definition  = '"log --graph --pretty=oneline --decorate --all"';
-disp ([banner '[ ' name ' ] Write the a history summary to the terminal.']);
+disp ([banner '[ ' name ' ] Write a summary of the history to the terminal.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
