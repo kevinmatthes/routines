@@ -54,7 +54,7 @@ git.config.call     = [git.config.self git.config.mode git.config.target];
 git.self            = ' git ';
 git.call            = [git.self git.config.call];
 
-gitk.self   = ' gitk ';
+repotool.self   = ' gitk ';
 
 
 
@@ -95,6 +95,12 @@ system ([git.call name ' ' definition]);
 name        = 'ff';
 definition  = ['"' 'merge --ff' '"'];
 disp ([banner '[ ' name ' ] Update a branch without a new commit.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
+name        = 'graph';
+definition  = ['"' '!' repotool.self ' --all &' '"'];
+disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
