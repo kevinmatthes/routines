@@ -143,6 +143,12 @@ disp ([banner '[ ' name ' ] Write the a history summary to the terminal.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'whereami';
+definition  = '"branch -vv"';
+disp ([banner '[ ' name ' ] Give information about the current branch.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 
 
 % End build instruction.
