@@ -68,12 +68,6 @@ banner  = ['[ ' files.self ' ] '];
 
 
 
-% Call adjustment.
-software.archiver.call  = [software.archiver.call files.library.target];
-software.archiver.call  = [software.archiver.call files.library.source];
-
-
-
 %%%%
 %%
 %% Build steps.
@@ -85,8 +79,12 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% .
-disp ([banner 'Done.']);
+% Set the Git commands.
+disp ([banner 'Clone a bare repository.']);
+name        = 'bone';
+definition  = ['"' 'clone --bare' '"'];
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
 
 
 
