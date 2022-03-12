@@ -143,6 +143,12 @@ disp ([banner '[ ' name ' ] Update a branch with a new commit.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'savetags';
+definition  = '"push --tags -f"';
+disp ([banner '[ ' name ' ] Backup all tags.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'verbose';
 definition  = '"log --graph --stat --pretty=fuller --decorate --all -p"';
 disp ([banner '[ ' name ' ] Write the whole history to the terminal.']);
