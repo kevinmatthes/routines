@@ -162,7 +162,7 @@ disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'store';
-definition  = '"!git backup backup-drive && git save-tags backup-drive"';
+definition  = '"!git backup backup-drive && git savetags backup-drive"';
 disp ([banner '[ ' name ' ] Backup all commits and tags.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
