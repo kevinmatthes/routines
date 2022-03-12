@@ -88,6 +88,12 @@ disp ([banner '[ ' name ' ] Clone a bare repository.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'bugfix';
+definition  = '"!git commit -m Bugfix && git store"';
+disp ([banner '[ ' name ' ] Write and backup a bugfix.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'checkin';
 definition  = '"!git add . && git commit"';
 disp ([banner '[ ' name ' ] Immediately create a new commit.']);
