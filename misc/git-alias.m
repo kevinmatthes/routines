@@ -88,6 +88,12 @@ disp ([banner '[ ' name ' ] Backup all commits.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'backupdestination';
+definition  = '"remote add backup-drive"';
+disp ([banner '[ ' name ' ] Set up a mounted drive as backup destination.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'bone';
 definition  = '"clone --bare"';
 disp ([banner '[ ' name ' ] Clone a bare repository.']);
