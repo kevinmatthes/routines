@@ -119,6 +119,12 @@ disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'newbranch';
+definition  = '"checkout -b"';
+disp ([banner '[ ' name ' ] Create and switch to a new branch.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'noff';
 definition  = '"merge --no-ff"';
 disp ([banner '[ ' name ' ] Update a branch with a new commit.']);
