@@ -39,32 +39,25 @@
 --
 ------------------------------------------------------------------------------->
 
-# `./library/`
+# `./misc/`
 
 ## Description
 
-This directory provides different default build instructions in order to create
-and maintain libraries.
-
-Since there are multiple possible applications for the creation and maintainance
-of libraries, this repository offers various routines using some of the most
-common ones.  The used software will be listed in the "Software Requirements"
-section of this README.
-
-Each provided script is named according to the library tool it uses as well as
-the action on libraries it performs.
+This directory provides a set of miscellaneous build routines.  Mostly, they are
+intended to be set-up scripts on their own.
 
 ## Software Requirements
 
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
-| `ar`              | application   | create and update static libraries    |
+| Git               | application   | application to be configurated        |
+| `gitk`            | application   | default repository inspection tool    |
 | GNU Octave        | application   | execution of the provided scripts     |
 
 ## Supported Actions
 
 | Script        | Action                                        |
 |:--------------|:----------------------------------------------|
-| `ar-create.m` | create and update static libraries with `ar`  |
+| `git-alias.m` | configure a set of useful alias commands      |
 
 <!----------------------------------------------------------------------------->
