@@ -100,15 +100,15 @@ disp ([banner '[ ' name ' ] Update a branch without a new commit.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
-name        = 'graph';
-definition  = ['"!' repotool.call '&"'];
-disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
-disp ([git.call name ' ' definition]);
-system ([git.call name ' ' definition]);
-
 name        = 'goto';
 definition  = ['"checkout"'];
 disp ([banner '[ ' name ' ] Switch to a certain branch.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
+name        = 'graph';
+definition  = ['"!' repotool.call '&"'];
+disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
