@@ -98,6 +98,12 @@ disp ([banner '[ ' name ' ] Switch to a certain branch.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'noff';
+definition  = ['"' 'merge --no-ff' '"'];
+disp ([banner '[ ' name ' ] Update a branch with a new commit.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 
 
 % End build instruction.
