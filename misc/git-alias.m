@@ -82,6 +82,12 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Set the Git commands.
+name        = 'backup';
+definition  = '"push --all"';
+disp ([banner '[ ' name ' ] Backup all commits.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'bone';
 definition  = '"clone --bare"';
 disp ([banner '[ ' name ' ] Clone a bare repository.']);
