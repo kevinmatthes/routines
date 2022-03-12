@@ -113,6 +113,12 @@ disp ([banner '[ ' name ' ] Immediately create a new Git repository.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'delbranch';
+definition  = '"branch -d"';
+disp ([banner '[ ' name ' ] Remove an obsolete branch.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'ff';
 definition  = '"merge --ff"';
 disp ([banner '[ ' name ' ] Update a branch without a new commit.']);
