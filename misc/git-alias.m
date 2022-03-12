@@ -124,6 +124,12 @@ disp ([banner '[ ' name ' ] Write the whole history to the terminal.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'view';
+definition  = ['"log --graph --pretty=oneline --decorate --all"'];
+disp ([banner '[ ' name ' ] Write the a history summary to the terminal.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 
 
 % End build instruction.
