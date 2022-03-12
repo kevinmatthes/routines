@@ -86,6 +86,12 @@ disp ([banner '[ ' name ' ] Clone a bare repository.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'ff';
+definition  = ['"' 'merge --ff' '"'];
+disp ([banner '[ ' name ' ] Update a branch without a new commit.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'goto';
 definition  = ['"' 'checkout' '"'];
 disp ([banner '[ ' name ' ] Switch to a certain branch.']);
