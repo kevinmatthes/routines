@@ -80,9 +80,15 @@ disp ([banner 'Begin build instruction.']);
 
 
 % Set the Git commands.
-disp ([banner 'Clone a bare repository.']);
 name        = 'bone';
 definition  = ['"' 'clone --bare' '"'];
+disp ([banner '(`' name '`) Clone a bare repository.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
+name        = 'goto';
+definition  = ['"' 'checkout' '"'];
+disp ([banner '(`' name '`) Switch to a certain branch.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
