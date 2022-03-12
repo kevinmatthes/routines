@@ -47,23 +47,24 @@
 %%%%
 
 % Software.
-software.archiver.self  = ' ar ';
-software.archiver.flags = ' rsv ';
-software.archiver.call  = [software.archiver.self software.archiver.flags];
+git.config.mode     = ' --global ';
+git.config.self     = ' config ';
+git.config.target   = ' alias.';
+git.config.call     = [git.config.self git.config.mode git.config.target];
+git.self            = ' git ';
+git.call            = [git.self git.config.call];
+
+gitk.self   = ' gitk ';
 
 
 
 % Files.
-files.self              = ' git-alias.m ';
-
-files.library.name      = '';
-files.library.source    = ' *.o ';
-files.library.target    = [' lib' files.library.name '.a '];
+files.self  = 'git-alias.m';
 
 
 
 % Control flow.
-banner  = ['[' files.self '] '];
+banner  = ['[ ' files.self ' ] '];
 
 
 
@@ -84,12 +85,7 @@ disp ([banner 'Begin build instruction.']);
 
 
 
-% Call library creation tool.
-disp ([banner 'Create library ' files.library.target ' ...']);
-
-disp (software.archiver.call);
-system (software.archiver.call);
-
+% .
 disp ([banner 'Done.']);
 
 
