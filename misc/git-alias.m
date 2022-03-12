@@ -55,7 +55,7 @@ git.self            = ' git ';
 git.call            = [git.self git.config.call];
 
 repotool.args   = ' --all ';
-repotool.self   = ' gitk ';
+repotool.self   = 'gitk';
 repotool.call   = [repotool.self repotool.args];
 
 
