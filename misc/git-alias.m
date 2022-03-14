@@ -157,7 +157,7 @@ system ([git.call name ' ' definition]);
 
 name        = 'rewind';
 definition  = '"reset --hard"';
-disp ([banner '[ ' name ' ] Reset the current branch to given point.']);
+disp ([banner '[ ' name ' ] Reset the current branch to the given point.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
