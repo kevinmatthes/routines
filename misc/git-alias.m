@@ -155,6 +155,12 @@ disp ([banner '[ ' name ' ] Update a branch with a new commit.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'rewind';
+definition  = '"reset --hard"';
+disp ([banner '[ ' name ' ] Reset the current branch to given point.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'savetags';
 definition  = '"push --tags -f"';
 disp ([banner '[ ' name ' ] Backup all tags.']);
