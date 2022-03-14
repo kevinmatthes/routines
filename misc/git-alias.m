@@ -137,6 +137,12 @@ disp ([banner '[ ' name ' ] Switch to a certain branch.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'grab';
+definition  = '"!git pull --all && git store"';
+disp ([banner '[ ' name ' ] Fetch, merge and backup all new commits.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'graph';
 definition  = ['"!' repotool.call '&"'];
 disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
