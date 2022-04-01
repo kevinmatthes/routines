@@ -54,9 +54,9 @@ git.config.call     = [git.config.self git.config.mode git.config.target];
 git.self            = ' git ';
 git.call            = [git.self git.config.call];
 
-lister.args = ' -ails ';
+lister.args = '-ails';
 lister.self = 'ls';
-lister.call = [lister.self lister.args];
+lister.call = [lister.self ' ' lister.args];
 
 repotool.args   = ' --all ';
 repotool.self   = 'gitk';
