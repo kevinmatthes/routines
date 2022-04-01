@@ -54,6 +54,10 @@ git.config.call     = [git.config.self git.config.mode git.config.target];
 git.self            = ' git ';
 git.call            = [git.self git.config.call];
 
+lister.args = ' -ails ';
+lister.self = 'ls';
+lister.call = [lister.self lister.args];
+
 repotool.args   = ' --all ';
 repotool.self   = 'gitk';
 repotool.call   = [repotool.self repotool.args];
@@ -146,6 +150,12 @@ system ([git.call name ' ' definition]);
 name        = 'graph';
 definition  = ['"!' repotool.call '&"'];
 disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
+name        = 'ls';
+definition  = ['"!' lister.call '"'];
+disp ([banner '[ ' name ' ] List the content of the working directory.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
