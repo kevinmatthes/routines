@@ -53,6 +53,7 @@ intended to be set-up scripts on their own.
 | Git               | application   | application to be configurated        |
 | `gitk`            | application   | default repository inspection tool    |
 | GNU Octave        | application   | execution of the provided scripts     |
+| `ls`              | application   | default lister                        |
 
 ## Supported Actions
 
