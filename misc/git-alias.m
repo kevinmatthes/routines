@@ -110,6 +110,13 @@ disp ([banner '[ ' name ' ] Write and backup a bugfix.']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
+name        = 'changelog';
+definition  = ['"!git add CHANGELOG.md && git commit -m ' "'"];
+definition  = [definition 'Log changes' "'" ' && git store"'];
+disp ([banner '[ ' name ' ] Add items to the changelog.']);
+disp ([git.call name ' ' definition]);
+system ([git.call name ' ' definition]);
+
 name        = 'checkin';
 definition  = '"!git add . && git commit"';
 disp ([banner '[ ' name ' ] Immediately create a new commit.']);
@@ -117,7 +124,7 @@ disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'create';
-definition  = ['"!git init && git add . && git commit -m ' "'" ];
+definition  = ['"!git init && git add . && git commit -m ' "'"];
 definition  = [definition 'This is the initial commit.' "'" '"'];
 disp ([banner '[ ' name ' ] Immediately create a new Git repository.']);
 disp ([git.call name ' ' definition]);
