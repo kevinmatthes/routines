@@ -54,7 +54,7 @@ git.config.call     = [git.config.self git.config.mode git.config.target];
 git.self            = ' git ';
 git.call            = [git.self git.config.call];
 
-lister.args = '-ails';
+lister.args = '-ails --color=always';
 lister.self = 'ls';
 lister.call = [lister.self ' ' lister.args];
 
