@@ -66,13 +66,9 @@ scangen.call    = [scangen.self ' ' scangen.in];
 
 
 
-% Files.
-files.self  = 'flex-gcc.m';
-
-
-
 % Miscellaneous.
-banner  = ['[ ' files.self ' ] '];
+misc.self   = 'flex-gcc.m';
+misc.banner = ['[ ' misc.self ' ] '];
 
 
 
@@ -83,7 +79,7 @@ banner  = ['[ ' files.self ' ] '];
 %%%%
 
 % Begin build instruction.
-disp ([banner 'Begin build instruction.']);
+disp ([misc.banner 'Begin build instruction.']);
 
 
 
@@ -99,27 +95,27 @@ disp ('Done.');
 
 
 % Call Flex.
-disp ([banner 'Compile scanner definition with Flex ...']);
+disp ([misc.banner 'Compile scanner definition with Flex ...']);
 
 disp (scangen.call);
 system (scangen.call);
 
-disp ([banner 'Done.']);
+disp ([misc.banner 'Done.']);
 
 
 
 % Call GCC.
-disp ([banner 'Compile C source code with GCC ...']);
+disp ([misc.banner 'Compile C source code with GCC ...']);
 
 disp (compiler.call);
 system (compiler.call);
 
-disp ([banner 'Done.']);
+disp ([misc.banner 'Done.']);
 
 
 
 % Clean build artifacts.
-fprintf ([banner 'Remove build artifacts ... ']);
+fprintf ([misc.banner 'Remove build artifacts ... ']);
 
 if length (glob (scangen.out));
     delete (scangen.out);
@@ -130,6 +126,6 @@ disp ('Done.');
 
 
 % End build instruction.
-disp ([banner 'End build instruction.']);
+disp ([misc.banner 'End build instruction.']);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
