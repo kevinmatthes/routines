@@ -87,6 +87,17 @@ disp ([banner 'Begin build instruction.']);
 
 
 
+% Clean previous compilation.
+fprintf ([misc.banner 'Remove previous compilation of ' compiler.out ' ... ']);
+
+if length (glob (compiler.out));
+    delete (compiler.out);
+end;
+
+disp ('Done.');
+
+
+
 % Call Flex.
 disp ([banner 'Compile scanner definition with Flex ...']);
 
