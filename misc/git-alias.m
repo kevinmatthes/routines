@@ -92,7 +92,9 @@ system ([git.call name ' ' definition]);
 
 name        = 'backupdestination';
 definition  = '"remote add backup-drive"';
-disp ([banner '[ ' name ' ] Set up a mounted drive as backup destination.']);
+fprintf ([ misc.banner '[ ' name ' ] Set up a mounted drive as backup '      ...
+           'destination:  '                                                  ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -126,7 +128,9 @@ name        = 'create';
 definition  = [ '"!git init && git add . && git commit -m ' "'"              ...
                 'This is the initial commit.' "'" '"'                        ...
               ];
-disp ([banner '[ ' name ' ] Immediately create a new Git repository.']);
+fprintf ([ misc.banner '[ ' name ' ] Immediately create a new Git repository'...
+           ':  '                                                             ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -150,19 +154,25 @@ system ([git.call name ' ' definition]);
 
 name        = 'grab';
 definition  = '"!git pull --all && git store"';
-disp ([banner '[ ' name ' ] Fetch, merge and backup all new commits.']);
+fprintf ([ misc.banner '[ ' name ' ] Fetch, merge and backup all new commits'...
+           ':  '
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'graph';
 definition  = ['"!' repotool.call '&"'];
-disp ([banner '[ ' name ' ] Invoke the GUI repository inspection tool.']);
+fprintf ([ misc.banner '[ ' name ' ] Invoke the GUI repository inspection '  ...
+           'tool:  '                                                         ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'ls';
 definition  = ['"!' lister.call '"'];
-disp ([banner '[ ' name ' ] List the content of the working directory.']);
+fprintf ([ misc.banner '[ ' name ' ] List the content of the working '       ...
+           'directory:  '                                                    ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -180,7 +190,9 @@ system ([git.call name ' ' definition]);
 
 name        = 'rewind';
 definition  = '"reset --hard"';
-disp ([banner '[ ' name ' ] Reset the current branch to the given point.']);
+fprintf ([ misc.banner '[ ' name ' ] Reset the current branch to the given ' ...
+           'point:  '                                                        ...
+        ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -204,25 +216,33 @@ system ([git.call name ' ' definition]);
 
 name        = 'verbose';
 definition  = '"log --graph --stat --pretty=fuller --decorate --all -p"';
-disp ([banner '[ ' name ' ] Write the whole history to the terminal.']);
+fprintf ([ misc.banner '[ ' name ' ] Write the whole history to the '        ...
+           'terminal:  '                                                     ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'view';
 definition  = '"log --graph --pretty=oneline --decorate --all"';
-disp ([banner '[ ' name ' ] Write a summary of the history to the terminal.']);
+fprintf ([ misc.banner '[ ' name ' ] Write a summary of the history to the ' ...
+           'terminal:  '                                                     ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'whereami';
 definition  = '"branch -vv"';
-disp ([banner '[ ' name ' ] Give information about the current branch.']);
+fprintf ([ misc.banner '[ ' name ' ] Give information about the current '    ...
+           'branch:  '                                                       ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'whichremotes';
 definition  = '"remote -v"';
-disp ([banner '[ ' name ' ] Give information about the remote repositories.']);
+fprintf ([ misc.banner '[ ' name ' ] Give information about the remote '     ...
+           'repositories:  '                                                 ...
+         ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
