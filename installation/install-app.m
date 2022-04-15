@@ -49,7 +49,7 @@
 % Software.
 octave.in   = ['' '.m'];
 octave.out  = ['./' ''];
-octave.self = ' octave ';
+octave.self = 'octave';
 octave.call = [octave.self ' ' octave.in];
 
 % Directories.
