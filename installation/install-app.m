@@ -56,11 +56,9 @@ octave.call = [octave.self ' ' octave.in];
 directories.dep1    = '~/.local/';
 directories.target  = '~/.local/bin/';
 
-% Files.
-files.self  = 'install-app.m';
-
 % Miscellaneous.
-banner  = ['[ ' files.self ' ] '];
+misc.self   = 'install-app.m';
+misc.banner = ['[ ' misc.self ' ] '];
 
 
 
@@ -71,19 +69,19 @@ banner  = ['[ ' files.self ' ] '];
 %%%%
 
 % Begin build instruction.
-disp ([banner 'Begin build instruction.']);
+disp ([misc.banner 'Begin build instruction.']);
 
 
 
 % Compile application.
-disp ([banner 'Compile the application to install ...']);
+disp ([misc.banner 'Compile the application to install ...']);
 system (octave.call);
-disp ([banner 'Done.']);
+disp ([misc.banner 'Done.']);
 
 
 
 % Create directories, if required.
-fprintf ([banner 'Check for ' directories.dep1 ' ... ']);
+fprintf ([misc.banner 'Check for ' directories.dep1 ' ... ']);
 if length (glob (directories.dep1));
     disp ('Done.');
 else;
@@ -91,7 +89,7 @@ else;
     disp ('Created.');
 end;
 
-fprintf ([banner 'Check for ' directories.target ' ... ']);
+fprintf ([misc.banner 'Check for ' directories.target ' ... ']);
 if length (glob (directories.target));
     disp ('Done.');
 else;
@@ -102,13 +100,13 @@ end;
 
 
 % Install.
-fprintf ([banner 'Install ' octave.out ' in ' directories.target ' ... ']);
+fprintf ([misc.banner 'Install ' octave.out ' in ' directories.target ' ... ']);
 movefile (octave.out, directories.target, 'f');
 disp ('Done.');
 
 
 
 % End build instruction.
-disp ([banner 'End build instruction.']);
+disp ([misc.banner 'End build instruction.']);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
