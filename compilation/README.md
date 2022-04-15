@@ -63,15 +63,15 @@ functionalities are used will be explained in detail in the following sections.
 
 ## Supported Actions
 
-| Script                      | Action                              |
-|:----------------------------|:------------------------------------|
-| `flex-gcc.m`                | compilation of a lexer              |
-| `g++-application.m`         | compilation of a target application |
-| `g++-objects.m`             | compilation of object files         |
-| `gcc-application.m`         | compilation of a target application |
-| `gcc-objects.m`             | compilation of object files         |
-| `gfortran-95-application.m` | compilation of a target application |
-| `gfortran-95-objects.m`     | compilation of object files         |
-| `gfortran-95-tests.m`       | compilation and call of test suites |
+| Script                        | Action                                |
+|:------------------------------|:--------------------------------------|
+| `flex-gcc.m`                  | compilation of a lexer                |
+| `g++-application.m`           | compilation of a target application   |
+| `g++-objects.m`               | compilation of object files           |
+| `gcc-application.m`           | compilation of a target application   |
+| `gcc-objects.m`               | compilation of object files           |
+| `gfortran-95-application.m`   | compilation of a target application   |
+| `gfortran-95-objects.m`       | compilation of object files           |
+| `gfortran-95-tests.m`         | compilation and call of test suites   |
 
 <!----------------------------------------------------------------------------->
