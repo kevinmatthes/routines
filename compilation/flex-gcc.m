@@ -53,13 +53,13 @@ compiler.flags  = [ ' -Wall -Werror -Wextra -Wpedantic '                     ...
                   ];
 compiler.in     = '*.c';
 compiler.link   = ' -lfl ';
-compiler.out    = 'italiano';
+compiler.out    = '';
 compiler.self   = ' gcc ';
 compiler.call   = [ compiler.self ' ' compiler.flags ' ' compiler.in ' '     ...
                     compiler.link ' -o ' compiler.out                        ...
                   ];
 
-scangen.in      = 'italiano.l';
+scangen.in      = '.l';
 scangen.out     = 'lex.yy.c';
 scangen.self    = ' flex ';
 scangen.call    = [scangen.self ' ' scangen.in];
