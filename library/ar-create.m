@@ -47,29 +47,17 @@
 %%%%
 
 % Software.
-software.archiver.self  = ' ar ';
-software.archiver.flags = ' rsv ';
-software.archiver.call  = [software.archiver.self software.archiver.flags];
+archiver.args   = ' rsv ';
+archiver.in     = '*.o';
+archiver.out    = ['lib'  '' '.a'];
+archiver.self   = ' ar ';
+archiver.call   = [ archiver.self ' ' archiver.args ' ' archiver.out ' '     ...
+                    archiver.in                                              ...
+                  ];
 
-
-
-% Files.
-files.self              = ' ar-create.m ';
-
-files.library.name      = '';
-files.library.source    = ' *.o ';
-files.library.target    = [' lib' files.library.name '.a '];
-
-
-
-% Control flow.
-banner  = ['[' files.self '] '];
-
-
-
-% Call adjustment.
-software.archiver.call  = [software.archiver.call files.library.target];
-software.archiver.call  = [software.archiver.call files.library.source];
+% Miscellaneous.
+misc.self   = 'ar-create.m';
+misc.banner = ['[ ' misc.self ' ] '];
 
 
 
