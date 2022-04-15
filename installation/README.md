@@ -46,6 +46,16 @@
 This directory provides different default build instructions in order to install
 software or libraries, for instance.
 
-At the moment, there is no such routine, yet.
+## Software Requirements
+
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
+| GNU Octave        | application   | execution of the provided scripts     |
+
+## Supported Actions
+
+| Script                        | Action                                |
+|:------------------------------|:--------------------------------------|
+| `install-app.m`               | install a compiled application        |
 
 <!----------------------------------------------------------------------------->
