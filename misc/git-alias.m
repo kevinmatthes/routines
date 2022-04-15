@@ -66,13 +66,9 @@ repotool.call   = [repotool.self repotool.args];
 
 
 
-% Files.
-files.self  = 'git-alias.m';
-
-
-
-% Control flow.
-banner  = ['[ ' files.self ' ] '];
+% Miscellaneous.
+misc.self   = 'git-alias.m';
+misc.banner = ['[ ' misc.self ' ] '];
 
 
 
@@ -83,7 +79,7 @@ banner  = ['[ ' files.self ' ] '];
 %%%%
 
 % Begin build instruction.
-disp ([banner 'Begin build instruction.']);
+disp ([misc.banner 'Begin build instruction.']);
 
 
 
@@ -239,6 +235,6 @@ system ([git.call name ' ' definition]);
 
 
 % End build instruction.
-disp ([banner 'End build instruction.']);
+disp ([misc.banner 'End build instruction.']);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
