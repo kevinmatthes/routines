@@ -47,12 +47,14 @@
 %%%%
 
 % Software.
-git.config.mode     = ' --global ';
-git.config.self     = ' config ';
-git.config.target   = ' alias.';
-git.config.call     = [git.config.self git.config.mode git.config.target];
-git.self            = ' git ';
-git.call            = [git.self git.config.call];
+git.config.mode     = '--global';
+git.config.self     = 'config';
+git.config.target   = 'alias.';
+git.config.call     = [ git.config.self ' ' git.config.mode ' '              ...
+                        git.config.target                                    ...
+                      ];
+git.self            = 'git';
+git.call            = [git.self ' ' git.config.call];
 
 lister.args = '-ails --color=always';
 lister.self = 'ls';
