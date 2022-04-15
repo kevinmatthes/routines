@@ -59,7 +59,7 @@ compiler.call   = [ compiler.self ' ' compiler.flags ' ' compiler.in ' '     ...
                     compiler.link ' -o ' compiler.out                        ...
                   ];
 
-scangen.in      = '.l';
+scangen.in      = ['' '.l'];
 scangen.out     = 'lex.yy.c';
 scangen.self    = 'flex';
 scangen.call    = [scangen.self ' ' scangen.in];
