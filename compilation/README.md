@@ -56,7 +56,7 @@ functionalities are used will be explained in detail in the following sections.
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
 | `g++`             | application   | C++ compiler                          |
-| `gcc`             | application   | C compiler                            |
+| GCC               | application   | C compiler                            |
 | `gfortran`        | application   | Fortran compiler                      |
 | GNU Octave        | application   | execution of the provided scripts     |
 
