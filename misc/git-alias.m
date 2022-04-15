@@ -155,7 +155,7 @@ system ([git.call name ' ' definition]);
 name        = 'grab';
 definition  = '"!git pull --all && git store"';
 fprintf ([ misc.banner '[ ' name ' ] Fetch, merge and backup all new commits'...
-           ':  '
+           ':  '                                                             ...
          ]);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
