@@ -68,21 +68,32 @@ misc.banner = ['[ ' misc.self ' ] '];
 %%%%
 
 % Begin build instruction.
-disp ([banner 'Begin build instruction.']);
+disp ([misc.banner 'Begin build instruction.']);
+
+
+
+% Clean outdated library.
+fprintf ([misc.banner 'Remove outdated version of ' archiver.out ' ... ']);
+
+if length (glob (archiver.out));
+    delete (archiver.out);
+end;
+
+disp ('Done.');
 
 
 
 % Call library creation tool.
-disp ([banner 'Create library ' files.library.target ' ...']);
+disp ([misc.banner 'Create library ' archiver.out ' ...']);
 
-disp (software.archiver.call);
-system (software.archiver.call);
+disp (archiver.call);
+system (archiver.call);
 
-disp ([banner 'Done.']);
+disp ([misc.banner 'Done.']);
 
 
 
 % End build instruction.
-disp ([banner 'End build instruction.']);
+disp ([misc.banner 'End build instruction.']);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
