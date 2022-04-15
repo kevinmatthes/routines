@@ -86,7 +86,7 @@ disp ([misc.banner 'Begin build instruction.']);
 % Set the Git commands.
 name        = 'backup';
 definition  = '"push --all"';
-disp ([banner '[ ' name ' ] Backup all commits.']);
+fprintf ([misc.banner '[ ' name ' ] Backup all commits:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -98,13 +98,13 @@ system ([git.call name ' ' definition]);
 
 name        = 'bone';
 definition  = '"clone --bare"';
-disp ([banner '[ ' name ' ] Clone a bare repository.']);
+fprintf ([misc.banner '[ ' name ' ] Clone a bare repository:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'bugfix';
 definition  = '"!git commit -m Bugfix && git store"';
-disp ([banner '[ ' name ' ] Write and backup a bugfix.']);
+fprintf ([misc.banner '[ ' name ' ] Write and backup a bugfix:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -112,13 +112,13 @@ name        = 'changelog';
 definition  = [ '"!git add CHANGELOG.md && git commit -m ' "'"               ...
                 'Log changes' "'" ' && git store"'                           ...
               ];
-disp ([banner '[ ' name ' ] Add items to the changelog.']);
+fprintf ([misc.banner '[ ' name ' ] Add items to the changelog:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'checkin';
 definition  = '"!git add . && git commit"';
-disp ([banner '[ ' name ' ] Immediately create a new commit.']);
+fprintf ([misc.banner '[ ' name ' ] Immediately create a new commit:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -132,19 +132,19 @@ system ([git.call name ' ' definition]);
 
 name        = 'delbranch';
 definition  = '"branch -d"';
-disp ([banner '[ ' name ' ] Remove an obsolete branch.']);
+fprintf ([misc.banner '[ ' name ' ] Remove an obsolete branch:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'ff';
 definition  = '"merge --ff"';
-disp ([banner '[ ' name ' ] Update a branch without a new commit.']);
+fprintf ([misc.banner '[ ' name ' ] Update a branch without a new commit:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'goto';
 definition  = '"checkout"';
-disp ([banner '[ ' name ' ] Switch to a certain branch.']);
+fprintf ([misc.banner '[ ' name ' ] Switch to a certain branch:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -168,13 +168,13 @@ system ([git.call name ' ' definition]);
 
 name        = 'newbranch';
 definition  = '"checkout -b"';
-disp ([banner '[ ' name ' ] Create a and switch to the new branch.']);
+fprintf ([misc.banner '[ ' name ' ] Create a and switch to the new branch:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'noff';
 definition  = '"merge --no-ff"';
-disp ([banner '[ ' name ' ] Update a branch with a new commit.']);
+fprintf ([misc.banner '[ ' name ' ] Update a branch with a new commit:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -186,19 +186,19 @@ system ([git.call name ' ' definition]);
 
 name        = 'savetags';
 definition  = '"push --tags -f"';
-disp ([banner '[ ' name ' ] Backup all tags.']);
+fprintf ([misc.banner '[ ' name ' ] Backup all tags:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'store';
 definition  = '"!git backup backup-drive && git savetags backup-drive"';
-disp ([banner '[ ' name ' ] Backup all commits and tags.']);
+fprintf ([misc.banner '[ ' name ' ] Backup all commits and tags:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'tidy';
 definition  = '"clean -dfx"';
-disp ([banner '[ ' name ' ] Remove all build artifacts.']);
+fprintf ([misc.banner '[ ' name ' ] Remove all build artifacts:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
@@ -228,7 +228,7 @@ system ([git.call name ' ' definition]);
 
 name        = 'withdraw';
 definition  = '"reset HEAD --"';
-disp ([banner '[ ' name ' ] Remove a file from the staging area.']);
+fprintf ([misc.banner '[ ' name ' ] Remove a file from the staging area:  ']);
 disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
