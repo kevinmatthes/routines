@@ -55,6 +55,7 @@ functionalities are used will be explained in detail in the following sections.
 
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
+| Flex              | application   | Lex compiler                          |
 | `g++`             | application   | C++ compiler                          |
 | GCC               | application   | C compiler                            |
 | `gfortran`        | application   | Fortran compiler                      |
