@@ -160,7 +160,7 @@ well as string concatenation in Octave.
 | Script        | Action                                        |
 |:--------------|:----------------------------------------------|
 | `ar-create.m` | create and update static libraries with `ar`  |
-| `flex-gcc.m`                  | compilation of a lexer                |
+| `flex-gcc.m`  | compilation of a lexer                        |
 | `git-alias.m` | configure a set of useful alias commands      |
 
 <!----------------------------------------------------------------------------->
