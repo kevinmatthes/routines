@@ -73,9 +73,6 @@ invoked by calling `repository-manual.m`.
 
 ## Software Requirements
 
-The minimal software requirements for this repository are listed in the
-following.
-
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
 | `ar`              | application   | create and update static libraries    |
@@ -84,10 +81,18 @@ following.
 | Pandoc            | application   | compilation of repository manual      |
 | `texlive-full`    | package       | compilation of repository manual      |
 
-All further software requirements are named in the according directories of the
-various build routines.  Mostly, these further software requirements are just
-compilers, specific library creation tools or automatic documentation writing
-applications.
+The compilation of such an **optional** repository manual can be invoked by just
+calling one of the following lines in a terminal.
+
+```
+octave repository-manual.m
+octave-cli repository-manual.m
+```
+
+Both will redirect to the same application, GNU Octave, which will then create
+the manual for this repository and attach the entire license to it.  The
+resulting file, `repository.pdf`, will be saved in the main directory of this
+repository.
 
 ## Description
 
