@@ -83,8 +83,8 @@ disp ([misc.banner 'Begin build instruction.']);
 
 
 
-% Clean previous compilation.
-fprintf ([misc.banner 'Remove previous compilation of ' compiler.out ' ... ']);
+% Clean outdated compilation.
+fprintf ([misc.banner 'Remove outdated compilation of ' compiler.out ' ... ']);
 
 if length (glob (compiler.out));
     delete (compiler.out);
