@@ -78,6 +78,7 @@ following.
 
 | Requirement       | Type          | Role                              |
 |:------------------|:-------------:|:----------------------------------|
+| `ar`              | application   | create and update static libraries    |
 | `docs-snippets`   | repository    | documentation constants           |
 | GNU Octave        | application   | execution of the provided scripts |
 | Pandoc            | application   | compilation of repository manual  |
