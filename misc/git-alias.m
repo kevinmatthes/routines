@@ -60,9 +60,9 @@ lister.args = '-ails --color=always';
 lister.self = 'ls';
 lister.call = [lister.self ' ' lister.args];
 
-repotool.args   = ' --all ';
+repotool.args   = '--all';
 repotool.self   = 'gitk';
-repotool.call   = [repotool.self repotool.args];
+repotool.call   = [repotool.self ' ' repotool.args];
 
 
 
@@ -182,7 +182,7 @@ disp ([git.call name ' ' definition]);
 system ([git.call name ' ' definition]);
 
 name        = 'graph';
-definition  = ['"!' repotool.call '&"'];
+definition  = ['"!' repotool.call ' &"'];
 fprintf ([ misc.banner '[ ' name ' ] Invoke the GUI repository inspection '  ...
            'tool:  '                                                         ...
          ]);
