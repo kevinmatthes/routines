@@ -49,7 +49,7 @@
 % Software.
 archiver.args   = 'rsv';
 archiver.in     = '*.o';
-archiver.out    = ['lib'  '' '.a'];
+archiver.out    = ['lib' '' '.a'];
 archiver.self   = 'ar';
 archiver.call   = [ archiver.self ' ' archiver.args ' ' archiver.out ' '     ...
                     archiver.in                                              ...
