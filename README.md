@@ -150,4 +150,10 @@ whose variables need to be adjusted before an initial invocation in the binding
 repository.  This requires the users only to know about variable definitions as
 well as string concatenation in Octave.
 
+## Supported Actions
+
+| Script        | Action                                        |
+|:--------------|:----------------------------------------------|
+| `ar-create.m` | create and update static libraries with `ar`  |
+
 <!----------------------------------------------------------------------------->
