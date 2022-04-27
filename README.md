@@ -77,6 +77,8 @@ invoked by calling `repository-manual.m`.
 |:------------------|:-------------:|:--------------------------------------|
 | `ar`              | application   | create and update static libraries    |
 | `docs-snippets`   | repository    | documentation constants               |
+| Flex              | application   | Lex compiler                          |
+| GCC               | application   | C compiler                            |
 | Git               | application   | application to be configurated        |
 | `gitk`            | application   | default repository inspection tool    |
 | GNU Octave        | application   | execution of the provided scripts     |
@@ -158,6 +160,7 @@ well as string concatenation in Octave.
 | Script        | Action                                        |
 |:--------------|:----------------------------------------------|
 | `ar-create.m` | create and update static libraries with `ar`  |
+| `flex-gcc.m`                  | compilation of a lexer                |
 | `git-alias.m` | configure a set of useful alias commands      |
 
 <!----------------------------------------------------------------------------->

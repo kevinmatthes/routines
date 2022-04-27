@@ -55,7 +55,6 @@ functionalities are used will be explained in detail in the following sections.
 
 | Requirement       | Type          | Role                                  |
 |:------------------|:-------------:|:--------------------------------------|
-| Flex              | application   | Lex compiler                          |
 | `g++`             | application   | C++ compiler                          |
 | GCC               | application   | C compiler                            |
 | `gfortran`        | application   | Fortran compiler                      |
@@ -65,7 +64,6 @@ functionalities are used will be explained in detail in the following sections.
 
 | Script                        | Action                                |
 |:------------------------------|:--------------------------------------|
-| `flex-gcc.m`                  | compilation of a lexer                |
 | `g++-application.m`           | compilation of a target application   |
 | `g++-objects.m`               | compilation of object files           |
 | `gcc-application.m`           | compilation of a target application   |
