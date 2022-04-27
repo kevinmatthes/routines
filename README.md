@@ -77,7 +77,10 @@ invoked by calling `repository-manual.m`.
 |:------------------|:-------------:|:--------------------------------------|
 | `ar`              | application   | create and update static libraries    |
 | `docs-snippets`   | repository    | documentation constants               |
+| Git               | application   | application to be configurated        |
+| `gitk`            | application   | default repository inspection tool    |
 | GNU Octave        | application   | execution of the provided scripts     |
+| `ls`              | application   | default lister                        |
 | Pandoc            | application   | compilation of repository manual      |
 | `texlive-full`    | package       | compilation of repository manual      |
 
@@ -155,5 +158,6 @@ well as string concatenation in Octave.
 | Script        | Action                                        |
 |:--------------|:----------------------------------------------|
 | `ar-create.m` | create and update static libraries with `ar`  |
+| `git-alias.m` | configure a set of useful alias commands      |
 
 <!----------------------------------------------------------------------------->
