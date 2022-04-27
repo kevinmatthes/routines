@@ -76,13 +76,13 @@ invoked by calling `repository-manual.m`.
 The minimal software requirements for this repository are listed in the
 following.
 
-| Requirement       | Type          | Role                              |
-|:------------------|:-------------:|:----------------------------------|
+| Requirement       | Type          | Role                                  |
+|:------------------|:-------------:|:--------------------------------------|
 | `ar`              | application   | create and update static libraries    |
-| `docs-snippets`   | repository    | documentation constants           |
-| GNU Octave        | application   | execution of the provided scripts |
-| Pandoc            | application   | compilation of repository manual  |
-| `texlive-full`    | package       | compilation of repository manual  |
+| `docs-snippets`   | repository    | documentation constants               |
+| GNU Octave        | application   | execution of the provided scripts     |
+| Pandoc            | application   | compilation of repository manual      |
+| `texlive-full`    | package       | compilation of repository manual      |
 
 All further software requirements are named in the according directories of the
 various build routines.  Mostly, these further software requirements are just
