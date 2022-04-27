@@ -98,8 +98,6 @@ files.source        = [files.source ' ./installation/README.md '];
 files.source        = [files.source files.newpage];
 files.source        = [files.source ' ./misc/README.md '];
 files.source        = [files.source files.newpage];
-files.source        = [files.source ' ./uninstallation/README.md '];
-files.source        = [files.source files.newpage];
 files.source        = [files.source files.license];
 files.source        = [files.source files.newpage];
 
